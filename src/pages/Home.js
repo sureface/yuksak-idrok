@@ -1,10 +1,11 @@
 import React from 'react';
+import MainHeader from "../components/mainHeader";
 
 const Home = () => {
     return (
-        <divc className="container mx-auto">
-            <h1 className="text-3xl text-red-500">asdasdasd</h1>
-        </divc>
+        <div className="app">
+            <MainHeader />
+        </div>
     );
 };
 
