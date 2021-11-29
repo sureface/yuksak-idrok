@@ -21,16 +21,16 @@ const Navigation = () => {
                 </div>
                 <ul className="flex items-center ml-10">
                     <li>
-                        <Link className="links uppercase text-lg text-white font-semibold py-7 px-6" to="/courses">kurslar</Link>
+                        <Link className="links uppercase text-lg text-white font-semibold py-7 px-6 hover:bg-white hover:text-blue-500" to="/courses">kurslar</Link>
                     </li>
                     <li>
-                        <Link className="links uppercase text-lg text-white font-semibold py-7 px-6" to="/about">biz haqimizda</Link>
+                        <Link className="links uppercase text-lg text-white font-semibold py-7 px-6 hover:bg-white hover:text-blue-500" to="/about">biz haqimizda</Link>
                     </li>
                     <li>
-                        <Link className="links uppercase text-lg text-white font-semibold py-7 px-6" to="/news">yangiliklar</Link>
+                        <Link className="links uppercase text-lg text-white font-semibold py-7 px-6 hover:bg-white hover:text-blue-500" to="/news">yangiliklar</Link>
                     </li>
                     <li>
-                        <Link className="links uppercase text-lg text-white font-semibold py-7 px-6" to="/contact">biz bilan aloqa</Link>
+                        <Link className="links uppercase text-lg text-white font-semibold py-7 px-6 hover:bg-white hover:text-blue-500" to="/contact">biz bilan aloqa</Link>
                     </li>
                 </ul>
                 <div className="flex items-center">
@@ -50,7 +50,7 @@ const Navigation = () => {
                             </ul>
                         </div>
                     </div>
-                    <button type="button" className="links py-2 px-10 bg-transparent border border-white uppercase text-lg text-white font-semibold hover:border-opacity-0 ml-10">kirish</button>
+                    <Link to="/login" className="links py-2 px-10 bg-white rounded-xl uppercase text-lg text-blue-500 font-semibold hover:border-opacity-0 ml-10">kirish</Link>
                 </div>
             </div>
         </div>

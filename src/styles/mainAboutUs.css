@@ -1,0 +1,31 @@
+.aboutUsImage {
+  position: relative;
+}
+.aboutUsImage .btn {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, rgba(0, 183, 255, 0.68), rgba(0, 166, 255, 0.78));
+}
+.aboutUsImage .btn .link {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.aboutUsImage:hover .btn {
+  width: 100%;
+}
+.aboutUsImage:hover .btn .link {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=mainAboutUs.css.map */

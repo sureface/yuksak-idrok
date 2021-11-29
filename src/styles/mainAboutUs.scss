@@ -1,0 +1,33 @@
+.aboutUsImage{
+  position: relative;
+
+  .btn{
+    content: '';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: .5s  ease-in-out;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, rgba(0, 183, 255, 0.68), rgba(0, 166, 255, 0.78));
+
+    .link{
+      opacity: 0;
+      transition: .5s ease-in-out;
+    }
+  }
+  &:hover{
+    .btn{
+      width: 100%;
+      .link{
+        opacity: 1;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+}
