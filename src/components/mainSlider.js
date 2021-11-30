@@ -1,8 +1,10 @@
 import React from 'react';
 import {Swiper, SwiperSlide} from "swiper/react/swiper-react";
+
 import "swiper/swiper.min.css"
 import "swiper/swiper-bundle.min.js.map"
 import "../styles/mainSwiper.scss"
+
 import Teacher1 from "../assets/images/teacher1.jpg"
 import Teacher2 from "../assets/images/teacher2.png"
 import Teacher4 from "../assets/images/teacher4.jpg"
