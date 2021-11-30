@@ -1,5 +1,6 @@
 .bgHeader {
   position: relative;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/images/headerBg.png") center / cover no-repeat;
+  background-attachment: fixed;
   height: 600px;
 }

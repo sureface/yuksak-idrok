@@ -1,6 +1,5 @@
 import React from 'react';
 import "../styles/mainAboutUs.scss"
-import MainAboutUsImage from '../assets/images/main biz haqimzda.png'
 import {Link} from "react-router-dom";
 
 const MainAboutUs = () => {
@@ -57,10 +56,9 @@ const MainAboutUs = () => {
                         </p>
                     </div>
                     <div className="w-1/2 ml-10 aboutUsImage rounded-xl">
-                        <div className="btn">
-                            <Link to="/about" type='button' className="link bg-white text-blue-500 text-xl font-semibold rounded-lg uppercase py-3 px-5">batafsil</Link>
+                        <div className="btn flex items-center justify-center h-full">
+                            <Link to="/about" type='button' className="link bg-white text-blue-500 text-xl font-semibold rounded-lg shadow-lg uppercase py-3 px-5">batafsil</Link>
                         </div>
-                        <img src={MainAboutUsImage} className="w-full rounded-xl" alt="oops something wrong"/>
                     </div>
                 </div>
             </div>
