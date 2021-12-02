@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import "../styles/navigation.scss"
 import {FaAngleDown} from "react-icons/fa";
 import Logo from "../assets/images/logoYuksakIdrok.png"
+import newYearLogo from "../assets/images/newYearLogo.png"
 
 const Navigation = () => {
 
@@ -17,7 +18,7 @@ const Navigation = () => {
         <div className="navigationBar h-20 bg-blue-500 flex items-center">
             <div className="container mx-auto flex items-center justify-between">
                 <div>
-                    <Link to="/"><img className="w-32" src={Logo} alt="oops something went wrong"/></Link>
+                    <Link to="/"><img className="w-32" src={newYearLogo} alt="oops something went wrong"/></Link>
                 </div>
                 <ul className="flex items-center ml-10">
                     <li>
