@@ -67,7 +67,7 @@ const Footer = () => {
                 </div>
                 <hr/>
                 <div className="flex items-center justify-center pt-5">
-                    <h1 className="text-white text-md font-semibold">&copy; 2022 By <a href="#" className="text-black font-bold">WWC</a> All Rights Reserved</h1>
+                    <h1 className="text-white text-md font-semibold"> &copy; 2022 By <a href="#" className="text-black font-bold">WWC</a> All Rights Reserved</h1>
                 </div>
             </div>
         </div>
