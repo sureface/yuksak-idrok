@@ -15,8 +15,8 @@ import MainPartners from "../components/mainPartners";
 const Home = () => {
     return (
         <div className="app relative">
-            <img src={NewYearLeft} className="absolute top-1 left-0 z-40 w-32" alt="oops something wrong"/>
-            <img src={NewYearRight} className="absolute top-1 right-0 z-40 w-32" alt="oops something wrong"/>
+            <img src={NewYearLeft} className="absolute top-0 left-0 z-40 w-32" alt="oops something wrong"/>
+            <img src={NewYearRight} className="absolute top-0 right-0 z-40 w-32" alt="oops something wrong"/>
             <MainHeader />
             <CourseSection />
             <RegisterFast />
