@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import "../styles/navigation.scss"
 import {FaAngleDown} from "react-icons/fa";
-import Logo from "../assets/images/logoYuksakIdrok.png"
+// import Logo from "../assets/images/logoYuksakIdrok.png"
 import newYearLogo from "../assets/images/newYearLogo.png"
 
 const Navigation = () => {
