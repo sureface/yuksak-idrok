@@ -10,19 +10,19 @@ const Footer = () => {
                         <h1 className="text-xl text-white font-medium mb-4 uppercase">Foydali linklar</h1>
                         <ul>
                             <li className="h-10">
-                                <Link to="/courses" className="text-white text-md">KURSLAR</Link>
+                                <Link to="/courses" className="text-white text-md uppercase">KURSLAR</Link>
                             </li>
                             <li className="h-10">
-                                <Link to="/about" className="text-white text-md">BIZ HAQIMIZDA</Link>
+                                <Link to="/about" className="text-white text-md uppercase">BIZ HAQIMIZDA</Link>
                             </li>
                             <li className="h-10">
-                                <Link to="/news" className="text-white text-md">YANGILIKLAR</Link>
+                                <Link to="/news" className="text-white text-md uppercase">YANGILIKLAR</Link>
                             </li>
                             <li className="h-10">
-                                <Link to="/contact" className="text-white text-md">BIZ BILAN ALOQA</Link>
+                                <Link to="/contact" className="text-white text-md uppercase">BIZ BILAN ALOQA</Link>
                             </li>
                             <li className="h-10">
-                                <Link to="/teachers" className="text-white text-md">Oqituvchilarimiz</Link>
+                                <Link to="/teachers" className="text-white text-md uppercase">Oqituvchilarimiz</Link>
                             </li>
                         </ul>
                     </div>

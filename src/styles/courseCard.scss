@@ -1,9 +1,8 @@
 .courseSection{
   .course-card{
+    height: max-content;
     &_img{
-      background: linear-gradient(to right, rgba(0,0,0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/images/russian.jpg") center / cover no-repeat;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
+      background: linear-gradient(to right, rgba(0,0,0, 0.1), rgba(0, 0, 0, 0.2)), url("../assets/images/cardimage1.png") center / cover no-repeat;
 
       &_pop{
         background-color: rgba(255, 255, 255, .40);

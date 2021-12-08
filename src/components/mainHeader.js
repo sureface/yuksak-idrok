@@ -15,10 +15,15 @@ const MainHeader = () => {
             <div className="bgHeader">
                 <div className="container mx-auto flex flex-col justify-between h-full">
                     <div className="flex items-center justify-between w-full h-56 mt-24">
-                        <h1 className="text-white font-bold text-4xl uppercase tracking-widest">
-                            YUKSAK IDROK - BIZ SIZGA <br/>
-                            TALABA BO’LISHINGIZDA YORDAM BERAMIZ!
-                        </h1>
+                        <div className="w-2/3">
+                            <h1 className="text-white font-bold text-4xl uppercase mb-5 tracking-wider">
+                                YUKSAK IDROK - BIZ SIZGA
+                            </h1>
+                            <h1 className="text-white font-bold text-4xl uppercase tracking-widest">
+                                TALABA BO’LISHINGIZDA YORDAM BERAMIZ!
+                            </h1>
+                        </div>
+
                         <div className="flex flex-col items-center justify-between h-full">
                             {/*animate-bounce => for icons*/}
                             <a href="#" className="relative">

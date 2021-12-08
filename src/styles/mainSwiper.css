@@ -1,18 +1,66 @@
-.swiper-container {
-  margin: 0 auto;
-  width: 80%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.sliderBox {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: animate 30s linear infinite;
 }
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 400px;
-  height: 500px;
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
 }
-.swiper-slide img {
+.sliderBox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(450px);
+  -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #0004);
+}
+.sliderBox span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sliderBox span h1 {
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 70px);
+  transform: perspective(500px) translateZ(50px);
+}
+.sliderBox .span1 {
+  --i: 1;
+}
+.sliderBox .span2 {
+  --i: 2;
+}
+.sliderBox .span3 {
+  --i: 3;
+}
+.sliderBox .span4 {
+  --i: 4;
+}
+.sliderBox .span5 {
+  --i: 5;
+}
+.sliderBox .span6 {
+  --i: 6;
+}
+.sliderBox .span7 {
+  --i: 7;
+}
+.sliderBox .span8 {
+  --i: 8;
 }
 
 /*# sourceMappingURL=mainSwiper.css.map */
