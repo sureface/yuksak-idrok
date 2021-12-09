@@ -1,24 +1,16 @@
 .navigationBar{
   .links{
     transition: .3s ease-in-out;
-
-    &:hover{
-
-      //background-color: rgba(255, 255, 255, .15);
-      //backdrop-filter: blur(5px);
-    }
-
   }
   .dropdown{
     position: relative;
 
     .dropdown-menu {
       position: absolute;
-      left: 0;
-      top: calc(100% + .25rem);
+      left: -.25rem;
+      top: 2rem;
       z-index: 1;
       background: #ffffff;
-      padding: .75rem;
       border-radius: .25rem;
       box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 1);
       opacity: 0;
@@ -26,10 +18,14 @@
       transform: translateY(-20px);
       transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     }
-    .lanSelector.active + .dropdown-menu{
+    .dropdown-menu.active{
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
+    }
+    .angelDown.rotateTop{
+      transition: all .5s ease-in-out;
+      transform: rotate(-180deg);
     }
   }
 }

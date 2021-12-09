@@ -7,12 +7,11 @@ import newYearLogo from "../assets/images/newYearLogo.png"
 
 const Navigation = () => {
 
-    const [isOpen, setIsOpen] = useState(false)
-
-    const ShowDropDown = () => {
-        setIsOpen(isOpen === true);
-        console.log(setIsOpen)
-    }
+    const [clicked, setClicked] = useState(false);
+    const [selectedRu] = useState("RU");
+    const [selectedEn] = useState("EN");
+    const [selectedUz] = useState("UZ");
+    const [defaultLan, setDefaultLan] = useState("UZ");
 
     return (
         <div className="navigationBar h-20 bg-blue-500 flex items-center">
@@ -36,17 +35,20 @@ const Navigation = () => {
                 </ul>
                 <div className="flex items-center">
                     <div className="dropdown">
-                        <div className="lanSelector flex items-center">
-                            <button className="uppercase text-lg text-white font-semibold mr-1" onClick={ShowDropDown}>uz</button>
-                            <FaAngleDown className="text-white" />
+                        <div className="flex items-center cursor-pointer" onClick={() => setClicked(!clicked)}>
+                            <button className="uppercase text-lg text-white font-semibold mr-1">{defaultLan}</button>
+                            <FaAngleDown className={ clicked ? "text-white angelDown rotateTop" : "text-white"} />
                         </div>
-                        <div className="dropdown-menu">
+                        <div className={clicked ? "dropdown-menu active" : "dropdown-menu"}>
                             <ul>
                                 <li>
-                                    <a href="#" className="uppercase text-lg text-blue-500 font-semibold">RU</a>
+                                    <a href="#" className="uppercase text-lg text-blue-500 font-semibold hover:bg-blue-500 hover:text-white px-3" onClick={() => setDefaultLan(selectedRu) || setClicked(!clicked)}>{selectedRu}</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="uppercase text-lg text-blue-500 font-semibold">EN</a>
+                                    <a href="#" className="uppercase text-lg text-blue-500 font-semibold hover:bg-blue-500 hover:text-white px-3" onClick={() => setDefaultLan(selectedEn) || setClicked(!clicked)}>{selectedEn}</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="uppercase text-lg text-blue-500 font-semibold hover:bg-blue-500 hover:text-white px-3" onClick={() => setDefaultLan(selectedUz) || setClicked(!clicked)}>{selectedUz}</a>
                                 </li>
                             </ul>
                         </div>
