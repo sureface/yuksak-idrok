@@ -44,6 +44,7 @@ gap: 20px;
     font-size: 24px;
     font-weight: 500;
 }
+
 .left{
     box-shadow: 2px 3px 10px #1C1C1C70;
     color: #fff;
