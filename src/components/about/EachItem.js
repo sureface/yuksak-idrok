@@ -15,7 +15,7 @@ const EachItem = ({ItemTitle, image, title , text, link}) => {
                 <p className="info__text">
                     {text}
                 </p>
-                
+
             </div>
             <div className="next__icon">
                     <Link className='next' to={link}><GrLinkNext/> </Link>

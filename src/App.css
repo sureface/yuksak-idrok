@@ -11,5 +11,15 @@ body {
     max-width: 1200px;
   }
 }
+@media (max-width: 1300px) {
+  body .container {
+    max-width: 1070px;
+  }
+}
+@media (max-width: 1070px) {
+  body .container {
+    max-width: 900px;
+  }
+}
 
 /*# sourceMappingURL=App.css.map */
