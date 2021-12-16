@@ -1,80 +1,28 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import {GrLinkNext } from "react-icons/gr"
 
 const EachItem = ({ItemTitle, image, title , text, link}) => {
     return (
-        <EachItemStyled>
+        <div className="shadow-2xl flex flex-col justify-between w-full bg-white rounded-2xl">
             <div>
-            <h1 className='item__title'>{ItemTitle}</h1>
-            <img src={image} alt="rasm" />
+            <h1 className='text-center text-xl m-4'>{ItemTitle}</h1>
+            <img className='w-full h-72' src={image} alt="rasm" />
             </div>
-            <div className="item__info">
-                <h2 className="info__title">{title}</h2>
-                <p className="info__text">
+            <div className="p-4 flex flex-col gap-4">
+                <h2 className="text-xl">{title}</h2>
+                <p className="text-lg">
                     {text}
                 </p>
 
             </div>
-            <div className="next__icon">
-                    <Link className='next' to={link}><GrLinkNext/> </Link>
+            <div className="flex p-4 justify-end">
+                    <Link className='border-black border-2 p-3 border-solid rounded-full' to={link}><GrLinkNext/> </Link>
             </div>
-        </EachItemStyled>
+        </div>
     )
 }
 
-const EachItemStyled = styled.div`
-box-shadow: 2px 3px 10px #1C1C1C70;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-width: 100%;
-background-color: #F4F4F4;
-border-radius: 15px;
-img{
-    width: 100%;
-    height: 270px;
-}
-.item__title{
-    margin: 20px;
-    line-height: 150%;
-    letter-spacing: 0.05em;
-    color: #1C1C1C;
-    font-size: 20px;
-    text-align: center;
-}
-.item__info{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    .info__title{
-        line-height: 150%;
-        letter-spacing: 0.05em;
-        color: #1C1C1C;
-        font-size: 19px;
-    }
-    .info__text{
-        font-size: 17px;
-        line-height: 170%;
-        letter-spacing: 0.09em;
-        color: #1C1C1C; 
-        font-weight: 300;
-    }
-   
-}
-.next__icon{
-        display: flex;
-        padding: 20px;
-        justify-content: flex-end;
-        .next{
-            border: 2px solid #1C1C1C;
-            border-radius: 50%;
-            padding: 10px;
-            color: #1C1C1C;
-        }
-    }
-`
+
 
 export default EachItem

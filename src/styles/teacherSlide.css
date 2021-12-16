@@ -1,0 +1,36 @@
+.bg {
+  background-color: #0086C5;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  padding: 50px 0;
+}
+
+.slick-track .slick-center {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.slick-arrow::before {
+  font-size: 40px;
+  color: #0086C5;
+}
+
+.slick-prev {
+  left: 45%;
+  bottom: -20px;
+  z-index: 23;
+  top: auto;
+}
+
+.slick-next {
+  right: 45%;
+  bottom: -20px;
+  z-index: 23;
+  top: auto;
+}
+/*# sourceMappingURL=teacherSlide.css.map */
