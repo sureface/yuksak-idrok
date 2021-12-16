@@ -16,7 +16,9 @@ const Certificate = () => {
         infinite: true,
         centerPadding: "60px",
         slidesToShow: 3,
-        speed: 500
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 2000
       };
     return (
         <div className='py-12'>

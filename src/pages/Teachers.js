@@ -10,7 +10,7 @@ const Teachers = () => {
         <div>
             <Navigation />
             <div className='p-12'>
-                <h1 className="font-medium text-2xl tracking-wider">
+                <h1 className="font-medium text-2xl tracking-wider text-center">
                 TAJRIBALI USTOZLAR
                 </h1>
                 <TeacherSlide />

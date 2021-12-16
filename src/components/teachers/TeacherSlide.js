@@ -10,7 +10,9 @@ const TeacherSlide = () => {
         infinite: true,
         centerPadding: "60px",
         slidesToShow: 3,
-        speed: 800
+        speed: 800,
+        autoplay: true,
+        autoplaySpeed: 2000
       };
     return (
         <div>
