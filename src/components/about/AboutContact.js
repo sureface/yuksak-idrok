@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import {BsInstagram} from "react-icons/bs"
 import {BsTelegram} from "react-icons/bs"
 import {BsFacebook} from "react-icons/bs"
