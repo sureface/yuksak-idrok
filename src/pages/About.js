@@ -1,24 +1,22 @@
 import React from 'react';
 import Navigation from '../components/navigation';
 import Footer from "../components/footer";
-import AboutItem from '../components/about/AboutItem';
-import AboutContact from '../components/about/AboutContact';
+import AboutCards from "../components/about/aboutCards";
+import AboutContact from "../components/about/aboutContact";
 
 const About = () => {
     return (
         <div>
-        <Navigation />
-        <div className='p-12'>
-            <h1 className="text-center leading-normal tracking-wider text-2xl"> MARKAZ HAQIDA</h1> 
-            <AboutItem />   
-            <AboutContact />
-             
+            <Navigation/>
+            <div className="container mx-auto">
+                <h1 className="text-lg font-bold uppercase text-center my-10">markaz haqida</h1>
+                <AboutCards />
+                <AboutContact />
+            </div>
+            <Footer/>
         </div>
-        <Footer/>
-        </div>   
     );
 };
-
 
 
 export default About;
