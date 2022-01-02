@@ -30,32 +30,24 @@ const AContact = () => {
                 </div>
                 <hr className="my-4"/>
                 <div className="flex justify-between items-center mb-4">
-                    <div className="text-xl flex items-center">
-                        <a href="#">
-                            <BsInstagram  className="mr-5 text-4xl"/>
-                        </a>
+                    <a href="#" className="text-xl flex items-center">
+                        <BsInstagram  className="mr-5 text-4xl"/>
                         Instagram
-                    </div>
-                    <div className="text-xl flex items-center">
+                    </a>
+                    <a href="#" className="text-xl flex items-center">
                         Telegram
-                        <a href="#">
                             <FaTelegramPlane  className="ml-5 text-4xl"/>
-                        </a>
-                    </div>
+                    </a>
                 </div>
                 <div className="flex justify-between items-center">
-                    <div className="text-xl flex items-center">
-                        <a href="#">
-                            <BsFacebook  className="mr-5 text-4xl"/>
-                        </a>
+                    <a href="#" className="text-xl flex items-center">
+                        <BsFacebook  className="mr-5 text-4xl"/>
                         Facebook
-                    </div>
-                    <div className="text-xl flex items-center">
+                    </a>
+                    <a href="#" className="text-xl flex items-center">
                         Youtube
-                        <a href="#">
-                            <BsYoutube  className="ml-5 text-4xl"/>
-                        </a>
-                    </div>
+                        <BsYoutube  className="ml-5 text-4xl"/>
+                    </a>
                 </div>
             </div>
             <div className="col-span-7 h-96 putVideoPicMap">

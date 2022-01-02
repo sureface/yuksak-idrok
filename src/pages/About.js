@@ -1,8 +1,8 @@
 import React from 'react';
 import Navigation from '../components/navigation';
 import Footer from "../components/footer";
+import AContact from "../components/about/aContact";
 import AboutCards from "../components/about/aboutCards";
-import AContact from "../components/about/aboutContact";
 
 const About = () => {
     return (
