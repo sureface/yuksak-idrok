@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick';
-import ItemImg from "../../assets/images/teacher.jpg"
-import "../../styles/teacherSlide.scss"
+import ItemImg from "../../assets/images/teacher.jpg";
+import "../../styles/teacherSlide.scss";
 
 const TeacherSlide = () => {
     const settings = {
