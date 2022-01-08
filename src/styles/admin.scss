@@ -1,0 +1,37 @@
+.admin-layout{
+  &-left{
+    width: 250px;
+    .menu{
+      .nav-item{
+        .nav-link{
+          padding-left: 40px;
+          color: #888888;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            height: 0;
+            margin: auto;
+            width: 2px;
+            background-color: #00c0ff;
+            transition: all .02s linear;
+          }
+
+          &:hover{
+            &:after{
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-right{
+    width: calc(100% - 250px);
+  }
+}
