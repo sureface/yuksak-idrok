@@ -3,8 +3,9 @@
     width: 250px;
     .menu{
       .nav-item{
+        padding: 0.25rem 0;
         .nav-link{
-          padding-left: 40px;
+          padding: 6px 1.25rem;
           color: #888888;
           position: relative;
 
@@ -16,13 +17,14 @@
             bottom: 0;
             right: 0;
             height: 0;
-            margin: auto;
-            width: 2px;
-            background-color: #00c0ff;
-            transition: all .02s linear;
+            margin: auto 0;
+            width: 3px;
+            background-color: red;
+            transition: all 0.4s linear;
           }
 
-          &:hover{
+          &:hover, &.active{
+            color: #000000;
             &:after{
               height: 100%;
             }

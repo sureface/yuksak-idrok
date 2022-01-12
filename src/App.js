@@ -9,7 +9,7 @@ import News from "./pages/News";
 import Contact from "./pages/Contact";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
-import AdminMenu from "./pages/AdminMenu";
+import AdminMenus from "./pages/AdminMenus";
 
 const App = () => {
     return (
@@ -23,7 +23,7 @@ const App = () => {
                 <Route path="/contact" exact  component={Contact} />
                 <Route path="/login" exact  component={LogIn} />
                 <Route path="/signup" exact  component={SignUp} />
-                <Route path="/admin/menus" exact  component={AdminMenu} />
+                <Route path="/admin/menus" exact  component={AdminMenus} />
             </Switch>
         </BrowserRouter>
     );
