@@ -27,8 +27,8 @@ const Navigation = () => {
                     <FaBars  className="text-4xl text-blue-500"/>
                 </button>
                 <div>
-                    <Link to="/home"><img className="w-32 lg:block hidden" src={newYearLogo} alt="oops something went wrong"/></Link>
-                    <Link to="/home"><img className="w-32 lg:hidden block" src={LogoBlue} alt="oops something went wrong"/></Link>
+                    <Link to="/"><img className="w-32 lg:block hidden" src={newYearLogo} alt="oops something went wrong"/></Link>
+                    <Link to="/"><img className="w-32 lg:hidden block" src={LogoBlue} alt="oops something went wrong"/></Link>
                 </div>
                 <ul className={ showToggler ? "flex items-center ml-10 flex" : "flex items-center ml-10 lg:flex hidden show"}>
                     <li>
