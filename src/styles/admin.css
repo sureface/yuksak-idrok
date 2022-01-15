@@ -1,8 +1,11 @@
 .admin-layout-left {
   width: 250px;
 }
+.admin-layout-left .menu .nav-item {
+  padding: 0.25rem 0;
+}
 .admin-layout-left .menu .nav-item .nav-link {
-  padding-left: 40px;
+  padding: 6px 1.25rem;
   color: #888888;
   position: relative;
 }
@@ -14,12 +17,15 @@
   bottom: 0;
   right: 0;
   height: 0;
-  margin: auto;
-  width: 2px;
-  background-color: #00c0ff;
-  transition: all 0.02s linear;
+  margin: auto 0;
+  width: 3px;
+  background-color: red;
+  transition: all 0.4s linear;
 }
-.admin-layout-left .menu .nav-item .nav-link:hover:after {
+.admin-layout-left .menu .nav-item .nav-link:hover, .admin-layout-left .menu .nav-item .nav-link.active {
+  color: #000000;
+}
+.admin-layout-left .menu .nav-item .nav-link:hover:after, .admin-layout-left .menu .nav-item .nav-link.active:after {
   height: 100%;
 }
 .admin-layout-right {
