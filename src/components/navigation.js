@@ -10,10 +10,10 @@ const Navigation = () => {
 
     const [showNav, setShowNav] = useState(false);
     const [clicked, setClicked] = useState(false);
-    const [selectedRu] = useState("RU");
-    const [selectedEn] = useState("EN");
-    const [selectedUz] = useState("UZ");
-    const [defaultLan, setDefaultLan] = useState("UZ");
+    // const [selectedRu] = useState("RU");
+    // const [selectedEn] = useState("EN");
+    // const [selectedUz] = useState("UZ");
+    // const [defaultLan, setDefaultLan] = useState("UZ");
 
     const showToggler = () => {
         setShowNav(!showNav);
@@ -45,7 +45,7 @@ const Navigation = () => {
                     </li>
                 </ul>
                 <div className="flex items-center">
-                    <div className="dropdown lg:block hidden">
+                    {/* <div className="dropdown lg:block hidden">
                         <div className="flex items-center cursor-pointer" onClick={() => setClicked(!clicked)}>
                             <button className="uppercase text-lg text-white font-semibold mr-1">{defaultLan}</button>
                             <FaAngleDown className={ clicked ? "text-white angelDown rotateTop" : "text-white"} />
@@ -63,7 +63,7 @@ const Navigation = () => {
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                     <Link to="/login" className="py-2 lg:px-10 px-2 lg:bg-white sm:bg-transparent  rounded-xl uppercase text-lg text-blue-500 font-semibold hover:border-opacity-0 lg:ml-10 ml-0">kirish</Link>
                 </div>
             </div>

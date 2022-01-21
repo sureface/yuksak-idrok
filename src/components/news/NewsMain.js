@@ -5,11 +5,11 @@ const NewsMain = () => {
     return (
         <div>
             <h1 className='text-center pb-8 tracking-wider text-2xl font-bold my-10'>YANGILIKLAR</h1>
-            <div className='w-full flex justify-between bg-white rounded-xl h-96'>
-                <div className="w-2/5">
-                    <img className="rounded-l-xl" src={NewMain} alt="oops something wrong"/>
+            <div className='w-full flex lg:flex-row sm:flex-col justify-between bg-white rounded-xl lg:h-96'>
+                <div className="lg:w-2/5 w-full">
+                    <img className="lg:rounded-l-xl sm:rounded-xl" src={NewMain} alt="oops something wrong"/>
                 </div>
-                <div className="w-3/5 p-10">
+                <div className="lg:w-3/5 w-full xl:p-10 lg:p-3 sm:p-10">
                     <h2 className="text-center text-xl font-semibold mb-5">BITIRUVCHILARIMIZ 90% TALABA BO’LDI</h2>
                     <p className='text-lg leading-relaxed'>
                         Bu mavsumdagi bitiruvchilarimizning 90 dan ortig’i 1 - 20 chi

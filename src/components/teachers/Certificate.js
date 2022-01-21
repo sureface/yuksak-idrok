@@ -11,15 +11,31 @@ import cert6 from "../../assets/images/cert6.png"
 const Certificate = () => {
 
     const settings = {
-        className: "center",
-        centerMode: true,
         infinite: true,
-        centerPadding: "60px",
         slidesToShow: 3,
-        speed: 500,
+        speed: 800,
         autoplay: true,
-        autoplaySpeed: 2000
-      };
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 870,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            }
+          ]
+    };
     return (
         <div className='py-12'>
             <h1 className='font-medium text-2xl tracking-wider text-center'>YUTUQLAR</h1>

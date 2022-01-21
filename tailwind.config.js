@@ -7,6 +7,8 @@ module.exports = {
   darkMode: 'media',
   theme: {
     screens: {
+      xxs:'300',
+      xs: "412",
       sm: '640px',
       md: '768px',
       lg: '1024px',

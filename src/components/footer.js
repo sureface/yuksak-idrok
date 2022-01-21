@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="footer bg-blue-500 py-10">
             <div className="container mx-auto">
-                <div className="flex justify-between mb-5">
+                <div className="flex justify-between mb-5 lg:flex-nowrap sm:flex-wrap">
                     <div>
                         <h1 className="text-xl text-white font-medium mb-4 uppercase">Foydali linklar</h1>
                         <ul>
@@ -61,7 +61,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <iframe
-                        className="border-0"
+                        className="border-0 lg:w-1/3 sm:w-full"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d444.7639334761556!2d69.45028471744287!3d41.401749300158855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef0ec73a445e7%3A0x51694016433585ae!2z0L_Qs9GCINCj0LvRg9Cz0LHQtdC6ICjQptC10L3RgtGAKQ!5e1!3m2!1sru!2s!4v1638361250989!5m2!1sru!2s"
                         width="400" height="286" allowFullScreen="" loading="lazy">
                     </iframe>
