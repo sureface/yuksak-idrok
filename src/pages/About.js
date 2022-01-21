@@ -9,7 +9,7 @@ const About = () => {
         <div>
             <Navigation/>
             <div className="container mx-auto">
-                <h1 className="text-lg font-bold uppercase text-center my-10">markaz haqida</h1>
+                <h1 className="text-lg font-bold uppercase text-center lg:my-10 sm:my-3">markaz haqida</h1>
                 <AboutCards />
                 <AContact />
             </div>

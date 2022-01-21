@@ -9,8 +9,8 @@ const Teachers = () => {
     return (
         <div>
             <Navigation />
-            <div className='p-12'>
-                <h1 className="font-medium text-2xl tracking-wider text-center">
+            <div className='container mx-auto'>
+                <h1 className="font-medium text-2xl py-8 tracking-wider text-center">
                 TAJRIBALI USTOZLAR
                 </h1>
                 <TeacherSlide />

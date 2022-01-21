@@ -7,11 +7,35 @@ export default class NewsItem extends Component {
         const settings = {
             infinite: true,
             slidesToShow: 3,
-            slidesToScroll: 1,
+            speed: 800,
             autoplay: true,
-            speed: 500,
             autoplaySpeed: 2000,
-            cssEase: "linear"
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 870,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                  }
+                },
+                {
+                  breakpoint: 640,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+              ]
         };
         return (
             <div className="mb-16">
