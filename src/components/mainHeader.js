@@ -14,15 +14,15 @@ const MainHeader = () => {
             <Navigation />
             <div className="bgHeader">
                 <div className="container mx-auto flex flex-col justify-between h-full">
-                    <div className="flex items-center xl:justify-between lg:justify-around w-full  h-56   mt-24">
+                    <div className="flex lg:flex-row vl:flex-col items-center xl:justify-between lg:justify-around w-full  h-56   sm:mt-24 vl:mt-20">
                         <div className="lg:w-2/3 w-full">
-                            <h1 className="text-white font-bold text-4xl uppercase mb-5 tracking-wider leading-normal text-center">
+                            <h1 className="text-white font-bold sm:text-4xl vl:text-2xl uppercase sm:mb-5 vl:mb-3 tracking-wider leading-normal text-center">
                                 YUKSAK IDROK - BIZ SIZGA
                                 TALABA BO’LISHINGIZDA YORDAM BERAMIZ!
                             </h1>
                         </div>
 
-                        <div className="lg:flex flex-col items-center justify-between h-full hidden">
+                        <div className="flex lg:flex-col vl:flex-row lg:gap-0 vl:gap-10 items-center justify-between h-full lg:mt-0 vl:mt-7 ">
                             {/*animate-bounce => for icons*/}
                             <a href="#" className="relative">
                                 <FaFacebookF className="w-full h-full text-2xl text-white" />
@@ -42,33 +42,33 @@ const MainHeader = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="flex items-center justify-between h-48">
-                        <div className="grid grid-cols-3 lg:gap-4 w-full">
-                            <div className="flex items-center">
+                    <div className="flex items-center xs:mx-0 vl:mx-auto justify-between h-48">
+                        <div className="grid grid-cols-12 lg:gap-4 sm:gap-2 xs:mb-0   vl:mb-5 vl:gap-y-3 w-full">
+                            <div className="flex sm:flex-row xs:flex-col xs:justify-center sm:gap-1 gap-3    xs:col-span-4 vl:col-span-12 items-center">
                                 <div className="flex items-center justify-center h-14 w-14 xl:h-24 xl:w-24 lg:h-16 lg:w-16 rounded-full bg-white">
                                     <FaUserGraduate className="text-white text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
                                 </div>
-                                <div className="text-center lg:ml-10 md:ml-2">
-                                    <h1 className="text-white md:text-base lg:text-xl xl:text-4xl mb-2 font-bold">86 +</h1>
-                                    <h1 className="text-white md:text-base lg:text-xl xl:text-2xl font-bold uppercase leading-none">Bitiruvchilar</h1>
+                                <div className="xs:text-center flex vl:flex-col sm:flex-col xs:flex-col-reverse   lg:ml-10 md:ml-2 sm:gap-0 xs:gap-2">
+                                    <h1 className="text-white  text-base lg:text-xl xl:text-4xl mb-2 font-bold">86 +</h1>
+                                    <h1 className="text-white text-sm md:text-base lg:text-xl xl:text-2xl font-bold uppercase leading-none">Bitiruvchilar</h1>
                                 </div>
                             </div>
-                            <div className="flex justify-center items-center">
+                            <div className="flex sm:flex-row xs:flex-col xs:justify-center sm:gap-1 gap-3 xs:col-span-4 vl:col-span-12 items-center">
                                 <div className="flex items-center justify-center h-14 w-14 xl:h-24 xl:w-24 lg:h-16 lg:w-16 rounded-full bg-white">
                                     <FaUsers className="text-white text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
                                 </div>
-                                <div className="text-center lg:ml-10 md:ml-2">
+                                <div className="xs:text-center vl:flex-col flex sm:flex-col xs:flex-col-reverse lg:ml-10 md:ml-2 sm:gap-0 xs:gap-2">
                                     <h1 className="text-white md:text-base lg:text-xl xl:text-4xl mb-2 font-bold">154 +</h1>
-                                    <h1 className="text-white md:text-base lg:text-xl xl:text-2xl font-bold uppercase leading-none">o‘quvchilarimiz</h1>
+                                    <h1 className="text-white text-sm md:text-base lg:text-xl xl:text-2xl font-bold uppercase leading-none">o‘quvchilarimiz</h1>
                                 </div>
                             </div>
-                            <div className="flex justify-end items-center">
+                            <div className="flex sm:flex-row xs:flex-col xs:justify-center sm:gap-1  gap-3    xs:col-span-4 vl:col-span-12 items-center">
                                 <div className="flex items-center justify-center h-14 w-14 xl:h-24 xl:w-24 lg:h-16 lg:w-16 rounded-full bg-white">
                                     <FaUserTie className="text-white text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
                                 </div>
-                                <div className="text-center lg:ml-10 md:ml-2">
+                                <div className="xs:text-center vl:flex-col flex sm:flex-col xs:flex-col-reverse lg:ml-10 md:ml-2 sm:gap-0 xs:gap-2">
                                     <h1 className="text-white md:text-base lg:text-xl xl:text-4xl mb-2 font-bold">26 +</h1>
-                                    <h1 className="text-white md:text-base lg:text-xl xl:text-2xl font-bold uppercase leading-none">ustozlarimiz</h1>
+                                    <h1 className="text-white text-sm md:text-base lg:text-xl xl:text-2xl font-bold uppercase leading-none">ustozlarimiz</h1>
                                 </div>
                             </div>
                         </div>
