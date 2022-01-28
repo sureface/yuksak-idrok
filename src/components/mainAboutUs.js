@@ -4,10 +4,10 @@ import {Link} from "react-router-dom";
 
 const MainAboutUs = () => {
     return (
-        <div className="my-12">
+        <div className="sm:my-12 my-5">
             <div className="container mx-auto">
                 <h1 className="text-black text-2xl uppercase font-bold text-center my-10">BIZ HAQIMIZDA</h1>
-                <div className="grid grid-cols-1 xs:grid-cols-2 gap-10 h-96">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:h-96">
                     <div className="w-full">
                         <p className="text-black text-base font-semibold text-justify">
                             Lorem Ipsum is simply dummy text of the printing

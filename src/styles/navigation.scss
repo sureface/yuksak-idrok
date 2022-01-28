@@ -1,28 +1,36 @@
 .navigationBar{
   position: relative;
-  .link-wrapper {
-    position: absolute;
-    display: block;
-    z-index: 99;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100vh;
-    background: linear-gradient(to right, rgba(0, 136, 255, 0.9), rgba(0, 136, 255, 0.9));
-
-
-    .links{
-      transition: .3s ease-in-out;
-      @media (max-width: 1301px) {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-      }
-      @media (max-width: 1070px) {
-        padding: 0 1rem;
-      }
+  @media only screen and (max-width:1023px){
+    .nav-link{
+        display: flex;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        padding:  20px;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        display: flex;
+        z-index: 99;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        transition: all .4s ease;
+        background: linear-gradient(to right, rgba(0, 136, 255, 0.9), rgba(0, 136, 255, 0.9));
+        flex-wrap: wrap;
     }
+    .nav-link.show{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      position: absolute;
+      display: flex;
+      z-index: 99;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      
+      
+  
   }
-
+}
 
   .dropdown{
     position: relative;

@@ -8,16 +8,15 @@ import newYearLogo from "../assets/images/newYearLogo.png"
 
 const Navigation = () => {
 
-    const [showNav, setShowNav] = useState(false);
-    const [clicked, setClicked] = useState(false);
+     const [showNav, setShowNav] = useState(false);
+    // const [clicked, setClicked] = useState(false);
     // const [selectedRu] = useState("RU");
     // const [selectedEn] = useState("EN");
     // const [selectedUz] = useState("UZ");
     // const [defaultLan, setDefaultLan] = useState("UZ");
 
     const showToggler = () => {
-        setShowNav(!showNav);
-        console.log(showNav)
+        setShowNav(!showNav);  
     }
 
     return (
@@ -28,20 +27,20 @@ const Navigation = () => {
                 </button>
                 <div>
                     <Link to="/"><img className="w-32 lg:block hidden" src={newYearLogo} alt="oops something went wrong"/></Link>
-                    <Link to="/"><img className="w-32 lg:hidden block" src={LogoBlue} alt="oops something went wrong"/></Link>
+                    <Link onClick={showToggler} to="/"><img className="w-32 lg:hidden block" src={LogoBlue} alt="oops something went wrong"/></Link>
                 </div>
-                <ul className={ showToggler ? "flex items-center ml-10 flex" : "flex items-center ml-10 lg:flex hidden show"}>
+                <ul className={ showNav ? "lg:flex hidden items-center lg:ml-10 nav-link   show" : "lg:flex items-center lg:ml-10 nav-link  hidden "}>
                     <li>
-                        <Link className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold py-7 px-6 hover:bg-white hover:text-blue-500" to="/courses">kurslar</Link>
+                        <Link onClick={showToggler} className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/courses">kurslar</Link>
                     </li>
                     <li>
-                        <Link className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold py-7 px-6 hover:bg-white hover:text-blue-500" to="/about">biz haqimizda</Link>
+                        <Link onClick={showToggler} className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/about">biz haqimizda</Link>
                     </li>
                     <li>
-                        <Link className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold py-7 px-6 hover:bg-white hover:text-blue-500" to="/news">yangiliklar</Link>
+                        <Link onClick={showToggler} className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/news">yangiliklar</Link>
                     </li>
                     <li>
-                        <Link className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold py-7 px-6 hover:bg-white hover:text-blue-500" to="/contact">biz bilan aloqa</Link>
+                        <Link onClick={showToggler} className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/contact">biz bilan aloqa</Link>
                     </li>
                 </ul>
                 <div className="flex items-center">

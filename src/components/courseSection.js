@@ -21,12 +21,11 @@ const CourseSection = () => {
         autoplaySpeed: 2000,
         responsive: [
             {
-              breakpoint: 1024,
+              breakpoint: 1070,
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
-                infinite: true,
-                dots: true
+                infinite: true
               }
             },
             {
@@ -49,7 +48,7 @@ const CourseSection = () => {
     return (
         <div className="courseSection my-20">
             <div className="container mx-auto">
-                <h1 className="text-center uppercase text-2xl text-black font-bold mb-10">kurslar</h1>
+                <h1 className="text-center uppercase text-2xl text-black font-bold sm:mb-10">kurslar</h1>
                 <Slider {...settings}>
                     <div className="course-card bg-white shadow-lg w-full rounded-2xl">
                         <div className="flex items-center justify-between w-full py-2 px-4">

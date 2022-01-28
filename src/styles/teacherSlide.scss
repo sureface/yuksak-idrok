@@ -38,3 +38,12 @@
     z-index: 23;
     top: auto;
 }
+
+@media only screen and (max-width:590px){
+    .slick-prev{
+        left: 40%;
+    }
+    .slick-next{
+        right: 40%;
+    }
+}

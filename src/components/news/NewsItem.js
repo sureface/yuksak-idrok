@@ -16,8 +16,7 @@ export default class NewsItem extends Component {
                   settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+                    infinite: true
                   }
                 },
                 {
