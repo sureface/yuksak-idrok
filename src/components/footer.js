@@ -28,7 +28,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <h1 className="text-xl text-white font-medium mb-4 uppercase">bining manzil</h1>
-                        <div className="flex mb-5">
+                        <div className="flex xs:flex-row vl:flex-col mb-5">
                             <div className="w-36 mr-10">
                                 <h1 className="text-white text-md uppercase">Aloqa uchun tel:</h1>
                             </div>
@@ -37,7 +37,7 @@ const Footer = () => {
                                 <h1 className="text-white text-md">(71) 128-19-97</h1>
                             </div>
                         </div>
-                        <div className="flex mb-5">
+                        <div className="flex xs:flex-row vl:flex-col mb-5">
                             <div className="w-36 mr-10">
                                 <h1 className="text-white text-md uppercase">Manzil:</h1>
                             </div>
@@ -49,7 +49,7 @@ const Footer = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex">
+                        <div className="flex xs:flex-row vl:flex-col">
                             <div className="w-36 mr-10">
                                     <h1 className="text-white text-md uppercase">Mo’ljal:</h1>
                             </div>
