@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import AdminMenus from "./pages/AdminMenus";
+import RegisterCourse from './pages/RegisterCourse';
 
 const App = () => {
     return (
@@ -24,6 +25,7 @@ const App = () => {
                 <Route path="/login" exact  component={LogIn} />
                 <Route path="/signup" exact  component={SignUp} />
                 <Route path="/admin/menus" exact  component={AdminMenus} />
+                <Route path="/registerCourse" exact  component={RegisterCourse} />
             </Switch>
         </BrowserRouter>
     );

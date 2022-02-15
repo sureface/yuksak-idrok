@@ -4,11 +4,11 @@ import LoginImage from "../assets/images/login.png";
 const Login = () => {
     return (
         <div className="my-20">
-            <div className="flex items-center w-full">
-                <div className="w-1/2">
+            <div className="flex md:flex-row vl:flex-col items-center w-full">
+                <div className="md:w-1/2 vl:w-full">
                     <img className="w-full" src={LoginImage} alt="oops sorry something wrong"/>
                 </div>
-                <div className="w-1/2 py-10 px-12">
+                <div className="md:w-1/2 vl:w-full sm:py-10 sm:px-12 vl:p-3">
                     <div className="text-2xl text-black font-bold text-center flex flex-col mb-10">
                         Xush keldingiz!
                         <span className="text-lg font-normal">
