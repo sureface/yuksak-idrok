@@ -11,6 +11,7 @@ import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import AdminMenus from "./pages/AdminMenus";
 import RegisterCourse from './pages/RegisterCourse';
+import FullNews from './components/news/FullNews';
 
 const App = () => {
     return (
@@ -20,7 +21,8 @@ const App = () => {
                 <Route path="/about" exact  component={About} />
                 <Route path="/teachers" exact  component={Teachers} />
                 <Route path="/courses" exact  component={Courses} />
-                <Route path="/news" exact  component={News} />
+                <Route path="/news" exact component={News} />
+                <Route path='/full-news/:id' exact component={FullNews} />
                 <Route path="/contact" exact  component={Contact} />
                 <Route path="/login" exact  component={LogIn} />
                 <Route path="/signup" exact  component={SignUp} />
