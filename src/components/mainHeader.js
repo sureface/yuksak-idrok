@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React  from 'react';
 import '../styles/mainHeader.scss'
 import Navigation from "./navigation";
 import {FaFacebookF, FaInstagram, FaTelegramPlane, FaYoutube, FaUserGraduate, FaUsers, FaUserTie} from "react-icons/fa"
 
 const MainHeader = () => {
-    const [bitruvchlar, setBitruvchlar] = useState(0);
-    const [oquvchilar, setOquvchilar] = useState(0);
-    const [oqituvchilar, setOqituvchilar] = useState(0);
+    // const [bitruvchlar, setBitruvchlar] = useState(0);
+    // const [oquvchilar, setOquvchilar] = useState(0);
+    // const [oqituvchilar, setOqituvchilar] = useState(0);
 
 
     return (
@@ -24,19 +24,19 @@ const MainHeader = () => {
 
                         <div className="flex lg:flex-col vl:flex-row lg:gap-0 vl:gap-10 items-center justify-between h-full lg:mt-0 vl:mt-7 ">
                             {/*animate-bounce => for icons*/}
-                            <a href="#" className="relative">
+                            <a href="/#" className="relative">
                                 <FaFacebookF className="w-full h-full text-2xl text-white" />
                                 <span className="animate-ping absolute -top-1 -left-1 h-8 w-8 rounded-full bg-white opacity-75"> </span>
                             </a>
-                            <a href="#" className="relative">
+                            <a href="/#" className="relative">
                                 <FaInstagram className="w-full h-full text-2xl text-white" />
                                 <span className="animate-ping absolute -top-1 -left-1 h-8 w-8 rounded-full bg-white opacity-75"> </span>
                             </a>
-                            <a href="#" className="relative">
+                            <a href="/#" className="relative">
                                 <FaTelegramPlane className="w-full h-full text-2xl text-white" />
                                 <span className="animate-ping absolute -top-1 -left-1 h-8 w-8 rounded-full bg-white opacity-75"> </span>
                             </a>
-                            <a href="#" className="relative">
+                            <a href="/#" className="relative">
                                 <FaYoutube className="w-full h-full text-2xl text-white" />
                                 <span className="animate-ping absolute -top-1 -left-1 h-8 w-8 rounded-full bg-white opacity-75"> </span>
                             </a>
@@ -46,7 +46,7 @@ const MainHeader = () => {
                         <div className="grid grid-cols-12 lg:gap-4 sm:gap-2 xs:mb-0   vl:mb-5 vl:gap-y-3 w-full">
                             <div className="flex sm:flex-row xs:flex-col xs:justify-center sm:gap-1 gap-3    xs:col-span-4 vl:col-span-12 items-center">
                                 <div className="flex items-center justify-center h-14 w-14 xl:h-24 xl:w-24 lg:h-16 lg:w-16 rounded-full bg-white">
-                                    <FaUserGraduate className="text-white text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
+                                    <FaUserGraduate className="  text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
                                 </div>
                                 <div className="xs:text-center flex vl:flex-col sm:flex-col xs:flex-col-reverse   lg:ml-10 md:ml-2 sm:gap-0 xs:gap-2">
                                     <h1 className="text-white  text-base lg:text-xl xl:text-4xl mb-2 font-bold">86 +</h1>
@@ -55,7 +55,7 @@ const MainHeader = () => {
                             </div>
                             <div className="flex sm:flex-row xs:flex-col xs:justify-center sm:gap-1 gap-3 xs:col-span-4 vl:col-span-12 items-center">
                                 <div className="flex items-center justify-center h-14 w-14 xl:h-24 xl:w-24 lg:h-16 lg:w-16 rounded-full bg-white">
-                                    <FaUsers className="text-white text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
+                                    <FaUsers className=" text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
                                 </div>
                                 <div className="xs:text-center vl:flex-col flex sm:flex-col xs:flex-col-reverse lg:ml-10 md:ml-2 sm:gap-0 xs:gap-2">
                                     <h1 className="text-white md:text-base lg:text-xl xl:text-4xl mb-2 font-bold">154 +</h1>
@@ -64,7 +64,7 @@ const MainHeader = () => {
                             </div>
                             <div className="flex sm:flex-row xs:flex-col xs:justify-center sm:gap-1  gap-3    xs:col-span-4 vl:col-span-12 items-center">
                                 <div className="flex items-center justify-center h-14 w-14 xl:h-24 xl:w-24 lg:h-16 lg:w-16 rounded-full bg-white">
-                                    <FaUserTie className="text-white text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
+                                    <FaUserTie className="  text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
                                 </div>
                                 <div className="xs:text-center vl:flex-col flex sm:flex-col xs:flex-col-reverse lg:ml-10 md:ml-2 sm:gap-0 xs:gap-2">
                                     <h1 className="text-white md:text-base lg:text-xl xl:text-4xl mb-2 font-bold">26 +</h1>
