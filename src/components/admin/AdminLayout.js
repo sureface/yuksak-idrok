@@ -1,6 +1,6 @@
 import React from 'react';
 import {AiOutlineUser} from "react-icons/ai";
-import {Link, useParams} from "react-router-dom";
+import {Link } from "react-router-dom";
 import "../../styles/admin.scss";
 
 const AdminLayout = (props) => {

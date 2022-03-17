@@ -1,9 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import Slider from 'react-slick';
 import ItemImg from "../../assets/images/teacher.jpg";
 import "../../styles/teacherSlide.scss";
+import axios from 'axios';
+import { API_URL } from '../../utils/axios';
 
 const TeacherSlide = () => {
+
+    const [teachers, setTeachers] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+       getTeachers();
+    }, []);
+
+    useEffect(() => {
+        if (teachers.length !== 0) {
+            setIsLoading(false)
+        }
+    }, [teachers]);
+
+    const getTeachers = async () => { 
+
+        await axios.get(`${API_URL}/teachers`)
+            .then(res => { 
+                setTeachers(res.data.teachers);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
+    }
+
     const settings = {
         infinite: true,
         slidesToShow: 3,
@@ -14,8 +42,8 @@ const TeacherSlide = () => {
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 2,
+                slidesToScroll: 2,
                 infinite: true,
                 dots: true
               }
@@ -39,43 +67,39 @@ const TeacherSlide = () => {
     };
     return (
         <div>
-            <Slider  {...settings}>
-                <div className='bg rounded-xl overflow-hidden'>
-                    <img className='w-full' src={ItemImg} alt="" />
-                    <div className='p-4'>
-                        <h1 className='text-white text-xl tracking-wider font-medium'>AKMAL ANVAROV </h1>
-                        <p className="text-white">Markaz asoschisi</p>
-                    </div>
-                </div>
-                <div className='bg rounded-xl overflow-hidden'>
-                    <img className='w-full' src={ItemImg} alt="" />
-                    <div className='p-4'>
-                        <h1 className='text-white text-xl tracking-wider font-medium'>Mis. MALIKA  </h1> 
-                        <p className="text-white">Ingiliz tili o’qituvchisi</p>
-                    </div>
-                </div>
-                <div className='bg rounded-xl overflow-hidden'>
-                    <img className='w-full' src={ItemImg} alt="" />
-                    <div className='p-4'>
-                        <h className='text-white text-xl tracking-wider font-medium'>Mr. MASHXUR </h> 
-                        <p className="text-white">Matematika o’qituvchisi </p>
-                    </div>
-                </div>
-                <div className='bg rounded-xl overflow-hidden'>
-                    <img className='w-full' src={ItemImg} alt="" />
-                    <div className='p-4'>
-                        <h1 className='text-white text-xl tracking-wider font-medium'>Mr. JUJU</h1>
-                        <p className="text-white"> Arab tili O’qituvchisi</p>
-                    </div>
-                </div>
-                <div className='bg rounded-xl overflow-hidden'>
-                    <img className='w-full' src={ItemImg} alt="" />
-                    <div className='p-4'>
-                        <h1 className='text-white text-xl tracking-wider font-medium'>ALIXAN</h1>
-                        <p className="text-white">Yetakchi O’qituvchi</p>
-                    </div>
-                </div>
+            {
+                isLoading ? (
+                    <h2>Yuklanmoqda...</h2>
+                ): (
+                    <Slider  {...settings}>
+                {
+                    teachers.map((teacher) => {
+                        return (
+                            <div key={teacher.id} className="bg rounded-xl overflow-hidden">
+                                <div className="teacher-slide__img"
+                                style={{
+                                        backgroundImage: `url(${ItemImg})`,
+                                        backgroundPosition: "center",
+                                        backgroundSize: "cover",
+                                        backgroundRepeat: "no-repeat",
+                                        height: '200px'
+                                    }}    
+                                >
+                                    <img src={teacher.img} alt="" />
+                                     
+                                </div>
+                                <div className="p-4">
+                                    <h1 className="text-white text-xl tracking-wider font-medium">{teacher.first_name} { teacher.last_name}</h1> 
+                                    <p className='text-white'>{ teacher.description}</p>
+                                </div>
+                            </div>
+                        )
+                    })
+                 }
+                
             </Slider>
+                )
+            }
         </div>
     )
 }

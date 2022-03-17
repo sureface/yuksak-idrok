@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import "../styles/navigation.scss"
-import {FaAngleDown, FaBars} from "react-icons/fa";
+import { FaBars} from "react-icons/fa";
 // import Logo from "../assets/images/logoYuksakIdrok.png"
 import LogoBlue from "../assets/images/blue-logo.png"
 import newYearLogo from "../assets/images/newYearLogo.png"
