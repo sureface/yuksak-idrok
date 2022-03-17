@@ -7,9 +7,6 @@ import Teachers from "./pages/Teachers";
 import Courses from "./pages/Courses";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
-import LogIn from "./pages/LogIn";
-import SignUp from "./pages/SignUp";
-import AdminMenus from "./pages/AdminMenus";
 import RegisterCourse from './pages/RegisterCourse';
 import FullNews from './components/news/FullNews';
 
@@ -24,10 +21,7 @@ const App = () => {
                 <Route path="/news" exact component={News} />
                 <Route path='/full-news/:id' exact component={FullNews} />
                 <Route path="/contact" exact  component={Contact} />
-                <Route path="/login" exact  component={LogIn} />
-                <Route path="/signup" exact  component={SignUp} />
-                <Route path="/admin/menus" exact  component={AdminMenus} />
-                <Route path="/registerCourse" exact  component={RegisterCourse} />
+                <Route path="/courses/more" exact  component={RegisterCourse} />
             </Switch>
         </BrowserRouter>
     );

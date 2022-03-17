@@ -7,7 +7,7 @@ const MainInfoCard = () => {
     return (
         <div className="mainInfoCard py-20">
             <div className="container mx-auto">
-                <h1 className="text-center uppercase text-2xl text-black font-bold mb-20">bizda</h1>
+                <h1 className="text-center uppercase text-2xl text-blue-500 font-bold mb-20">BIZNING AFZALLIKLARIMIZ</h1>
                 <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-10 w-full">
                     <div className="card bg-white rounded-xl hover:shadow-xl w-full hover:scale-75">
                         <div>

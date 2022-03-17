@@ -1,17 +1,19 @@
 import React from 'react';
 import Navigation from '../components/navigation';
 import Footer from "../components/footer";
-import AContact from "../components/about/aContact";
 import AboutCards from "../components/about/aboutCards";
+import Certificate from "../components/certificate";
+import MainInfoCard from "../components/mainInfoCard";
 
 const About = () => {
     return (
         <div>
             <Navigation/>
             <div className="container mx-auto">
-                <h1 className="text-lg font-bold uppercase text-center md:my-10 vl:my-3">markaz haqida</h1>
+                <h1 className="text-2xl font-bold uppercase text-center md:my-10 vl:my-3 text-blue-500">o'quv markazimiz haqida</h1>
                 <AboutCards />
-                <AContact />
+                <Certificate />
+                <MainInfoCard />
             </div>
             <Footer/>
         </div>

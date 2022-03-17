@@ -19,7 +19,10 @@ const Home = () => {
             <MainAboutUs />
             <MainVideo />
             <MainSlider />
-            <MainInfo />
+            <div className="py-12">
+                <h1 className="text-black text-2xl uppercase font-bold text-center my-10">BIZ HAQIMIZDA</h1>
+                <MainInfo />
+            </div>
             <MainInfoCard />
             <MainPartners />
             <Footer />

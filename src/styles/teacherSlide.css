@@ -4,15 +4,11 @@
 
 /*contact styles*/
 .left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .right {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
 
 .color-primary {
@@ -21,16 +17,12 @@
 
 /* slider styles*/
 .slick-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 30px;
   padding: 50px 0;
 }
-
 .slick-track .slick-center {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .slick-arrow::before {
@@ -56,8 +48,10 @@
   .slick-prev {
     left: 40%;
   }
+
   .slick-next {
     right: 40%;
   }
 }
+
 /*# sourceMappingURL=teacherSlide.css.map */

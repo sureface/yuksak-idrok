@@ -3,7 +3,6 @@ import Navigation from "../components/navigation";
 import Footer from "../components/footer"
 import TeacherSlide from '../components/teachers/TeacherSlide';
 import EnglishTeacher from '../components/teachers/EnglishTeacher';
-import Certificate from '../components/teachers/Certificate';
 
 const Teachers = () => {
     return (
@@ -15,7 +14,6 @@ const Teachers = () => {
                 </h1>
                 <TeacherSlide />
                 <EnglishTeacher />
-                <Certificate/>
             </div>
             <Footer/>
         </div>

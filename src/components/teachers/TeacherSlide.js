@@ -1,6 +1,5 @@
 import React, { useState, useEffect} from 'react'
 import Slider from 'react-slick';
-import ItemImg from "../../assets/images/teacher.jpg";
 import "../../styles/teacherSlide.scss";
 import axios from 'axios';
 import { API_URL } from '../../utils/axios';
@@ -78,7 +77,7 @@ const TeacherSlide = () => {
                             <div key={teacher.id} className="bg rounded-xl overflow-hidden">
                                 <div className="teacher-slide__img"
                                 style={{
-                                        backgroundImage: `url(${ItemImg})`,
+                                        backgroundImage: `url(${teacher.img})`,
                                         backgroundPosition: "center",
                                         backgroundSize: "cover",
                                         backgroundRepeat: "no-repeat",

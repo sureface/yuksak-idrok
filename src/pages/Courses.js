@@ -9,7 +9,6 @@ const Courses = () => {
             <Navigation />
             <CourseSection/>
             <Footer/>
-            
         </div>
     );
 };
