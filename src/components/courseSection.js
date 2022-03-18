@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import "../styles/courseCard.scss";
-import Slider from 'react-slick';
-import {FaUserPlus} from "react-icons/fa"
-import { BsStarFill} from "react-icons/bs"
-import {MdReadMore} from "react-icons/md"
+import "../styles/courseCard.scss"; 
 import { Link } from "react-router-dom";
 import { API_URL } from '../utils/axios';
 
 const CourseSection = () => {
  
-    const [course, setCourse] = useState([]);
-
-
-    
-
-
+    const [course, setCourse] = useState([]); 
 
     useEffect(() => {
         const getCourse = async () => {
@@ -36,13 +27,13 @@ const CourseSection = () => {
     return (
         <div className="courseSection my-20">
             <div className="container mx-auto">
-                <h1 className="text-center uppercase text-2xl text-black font-bold sm:mb-10">kurslar</h1>
+                <h1 className="text-center uppercase text-2xl text-black font-bold  mb-10">kurslar</h1>
 
-                <div className="grid grid-cols-3 gap-6">
+                <div className="course-slides grid grid-cols-3 gap-6">
                     {
                         course.length ?
 
-                            course.map((item, index) => {
+                            course.map((item) => {
                                 return (
                                     <div key={item.id} className="course-card bg-white shadow-lg w-full rounded-2xl overflow-hidden">
 
@@ -66,7 +57,7 @@ const CourseSection = () => {
                                                 backgroundSize: "cover",
                                                 backgroundRepeat: "no-repeat"
                                             }}
-                                            className="course-card_img relative flex flex-col justify-between sm:h-72 vl:h-60">
+                                            className="course-card_img relative flex flex-col justify-between lg:h-72  ss:h-60  h-48">
                                         </div>
 
                                         <div className="flex items-center justify-center my-6">

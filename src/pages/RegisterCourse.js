@@ -26,11 +26,11 @@ const RegisterCourse = () => {
             <div className="grid grid-cols-2 my-8 rounded-2xl overflow-hidden"
             style={{backgroundColor: '#F7F7F7'}}
             >
-                <div>
+                <div className='col-span-2 sm:col-span-1'>
                         <img src={courseImg} className='' alt="" />
                 </div>
 
-                <div className="p-10">
+                <div className="col-span-2 sm:col-span-1 p-10">
                     <div className="grid grid-cols-2 gap-2" >
                         <button className={toggle === 1 ? "flex items-center justify-center py-2 text-lg font-semibold text-blue-500 border-t-2 border-blue-500" : "flex items-center justify-center py-2 text-lg font-semibold text_black"} onClick={() => currentTab(1)}>
                             Guruh
@@ -70,6 +70,7 @@ const RegisterCourse = () => {
 
                 </div>
             </div>
+
         </div>
         <Footer/>
   </div>;

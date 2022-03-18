@@ -3,8 +3,8 @@ import MainHeader from "../components/mainHeader";
 import CourseSection from "../components/courseSection";
 import RegisterFast from "../components/registerFast";
 import MainAboutUs from "../components/mainAboutUs";
-import MainVideo from "../components/mainVideo";
-import MainSlider from "../components/mainSlider";
+import MainVideo from "../components/mainVideo"; 
+import TeacherSlide from "../components/teachers/TeacherSlide";
 import MainInfo from "../components/mainInfo";
 import MainInfoCard from "../components/mainInfoCard";
 import Footer from "../components/footer";
@@ -18,7 +18,7 @@ const Home = () => {
             <RegisterFast />
             <MainAboutUs />
             <MainVideo />
-            <MainSlider />
+            <TeacherSlide />
             <div className="py-12">
                 <h1 className="text-black text-2xl uppercase font-bold text-center my-10">BIZ HAQIMIZDA</h1>
                 <MainInfo />
