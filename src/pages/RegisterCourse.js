@@ -2,12 +2,21 @@ import React, {useState} from 'react';
 import Footer from '../components/footer';
 import Navigation from '../components/navigation';
 import courseImg from "../assets/images/cardimage1.png";
-import {FaUserPlus} from "react-icons/fa"
+import { FaUserPlus } from "react-icons/fa"
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import {AiOutlineClose} from 'react-icons/ai';
+import MainInfo from '../components/mainInfo';
 
 const RegisterCourse = () => {
 
 
     const [toggle, setToggle] = useState(1);
+    const [isOpen, setIsOpen] = useState(false);
+    
+
+    const toggleModal = () => {
+        setIsOpen(!isOpen);
+    };
 
 
 
@@ -30,7 +39,7 @@ const RegisterCourse = () => {
                         <img src={courseImg} className='' alt="" />
                 </div>
 
-                <div className="col-span-2 sm:col-span-1 p-10">
+                <div className="flex flex-col justify-between col-span-2 sm:col-span-1 xs:p-10 p-5">
                     <div className="grid grid-cols-2 gap-2" >
                         <button className={toggle === 1 ? "flex items-center justify-center py-2 text-lg font-semibold text-blue-500 border-t-2 border-blue-500" : "flex items-center justify-center py-2 text-lg font-semibold text_black"} onClick={() => currentTab(1)}>
                             Guruh
@@ -66,7 +75,22 @@ const RegisterCourse = () => {
                         </div>
                     </div>
 
-                    <button className='mt-5 mx-auto py-2 px-16 bg-blue-500 rounded-xl flex items-center pointer justify-center text-white text-lg font-semibold'>  <FaUserPlus  className="text-2xl ml-3" /></button>
+                    <div className=' flex items-center justify-between mt-5'>
+                        <button onClick={toggleModal} className="text-white text-sm font-semibold flex gap-2 items-center  bg-blue-500 py-2 px-3 rounded-xl">
+                            <FaUserPlus  />
+                            Qo‘shilish
+                        </button> 
+
+
+                        <a className='text-white text-sm font-semibold flex gap-2 items-center bg-blue-500 py-2 px-3 rounded-xl' href="tel:+998909000909"> 
+                            <BsFillTelephoneFill/> Bog'lanish
+                        </a>
+                    </div>
+
+                    <div className={isOpen ? "fixed top-3 left-3 right-3 bottom-3 h-full" : "hidden"}>
+                        <AiOutlineClose onClick={toggleModal} className='absolute right-3 top-3 text-white text-2xl cursor-pointer' />
+                        <MainInfo/> 
+                    </div>
 
                 </div>
             </div>
