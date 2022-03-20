@@ -4,9 +4,9 @@ import {Link} from "react-router-dom";
 const Footer = () => {
     return (
         <div className="footer bg-blue-500 py-10">
-            <div className="container mx-auto">
-                <div className="flex justify-between mb-5 lg:flex-nowrap vl:flex-wrap">
-                    <div>
+            <div className="container mx-auto vl:text-left  ">
+                <div className="flex justify-between mb-5 lg:flex-nowrap vl:flex-wrap  " >
+                    <div className=' ss:m-0 ss:text-left m-auto text-center'>
                         <h1 className="text-xl text-white font-medium mb-4 uppercase">Foydali linklar</h1>
                         <ul>
                             <li className="h-10">
@@ -21,14 +21,14 @@ const Footer = () => {
                             <li className="h-10">
                                 <Link to="/contact" className="text-white text-md uppercase">BIZ BILAN ALOQA</Link>
                             </li>
-                            <li className="h-10">
+                            <li className="h-10 ">
                                 <Link to="/teachers" className="text-white text-md uppercase">Oqituvchilarimiz</Link>
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div  className='xs:m-0   m-auto  '>
                         <h1 className="text-xl text-white font-medium mb-4 uppercase">bining manzil</h1>
-                        <div className="flex xs:flex-row vl:flex-col mb-5">
+                        <div className="flex xs:flex-row vl:flex-col mb-5     ">
                             <div className="w-36 mr-10">
                                 <h1 className="text-white text-md uppercase">Aloqa uchun tel:</h1>
                             </div>

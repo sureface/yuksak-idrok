@@ -9,7 +9,7 @@ const FullNews = () => {
     
     const {id} = useParams();
      
-      const [isLoading, setIsLoading] = useState(true);
+     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
     
     useEffect(() => {
@@ -44,7 +44,7 @@ const FullNews = () => {
                       data.map(item => { 
                           return (
                             <div className="bg-white grid grid-cols-6 rounded-xl overflow-hidden" key={item.id}>
-                                    <div className="w-full col-span-2"
+                                    <div className="w-full md:col-span-2 col-span-6"
                                         style={{
                                             background: ' #eee',  
                                             height: '100%',
@@ -54,7 +54,7 @@ const FullNews = () => {
                                             
                                         />
                                     </div>
-                                    <div className="p-5 col-span-4">
+                                    <div className="p-5 md:col-span-4 col-span-6">
                                         <h2 className="sm:text-xl ss:text-lg font-semibold">{item.title}</h2>
                                         <p className="text-justify py-2">{item.subtitle }</p>
                                          
