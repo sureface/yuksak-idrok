@@ -21,7 +21,7 @@ const App = () => {
                 <Route path="/news" exact component={News} />
                 <Route path='/full-news/:id' exact component={FullNews} />
                 <Route path="/contact" exact  component={Contact} />
-                <Route path="/courses/more" exact  component={RegisterCourse} />
+                <Route path="/courses/more/:idCourse" exact  component={RegisterCourse} />
             </Switch>
         </BrowserRouter>
     );

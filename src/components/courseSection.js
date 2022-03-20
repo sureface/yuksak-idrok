@@ -67,7 +67,7 @@ const CourseSection = () => {
                                         </div>
 
                                         <div className="px-4">
-                                            <Link to="/courses/more"
+                                            <Link to={`/courses/more/${item.id}`}  
                                                   className="mb-3 py-2 px-5 bg-blue-500 rounded-xl flex items-center justify-center text-white text-lg font-semibold  z-10 uppercase">
                                                 batafsil malumot
                                             </Link>

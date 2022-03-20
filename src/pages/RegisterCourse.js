@@ -1,19 +1,43 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Footer from '../components/footer';
 import Navigation from '../components/navigation';
-import courseImg from "../assets/images/cardimage1.png";
-import { FaUserPlus } from "react-icons/fa"
+import courseImg from "../assets/images/cardimage1.png"; 
 import { BsFillTelephoneFill } from 'react-icons/bs';
+import {FiSend} from 'react-icons/fi';
 import {AiOutlineClose} from 'react-icons/ai';
 import MainInfo from '../components/mainInfo';
+import axios from 'axios'
+import { API_URL } from '../utils/axios';
+import { useParams } from 'react-router-dom'
 
 const RegisterCourse = () => {
 
 
     const [toggle, setToggle] = useState(1);
     const [isOpen, setIsOpen] = useState(false);
+    const [course, setCourse] = useState([]);
     
 
+
+    const { idCourse } = useParams();
+    
+    useEffect(() => {
+        getOneCourse();
+    });
+
+    const getOneCourse = async () => { 
+
+        await axios.get(`${API_URL}/courses/${idCourse}`)
+        .then(res => { 
+            setCourse(res.data.course);  
+            
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+
+    //toggle for  modal
     const toggleModal = () => {
         setIsOpen(!isOpen);
     };
@@ -29,7 +53,13 @@ const RegisterCourse = () => {
         <Navigation />
         <div className="container mx-auto">
             <h1 className="w-full text-2xl font-semibold text-center vl:my-5 sm:my-10 uppercase">
-            KURSLARGA YOZILISH 
+                {
+                    course.map(item => {
+                        return item.title
+                    })
+                    
+
+                 }
             </h1>
 
             <div className="grid grid-cols-2 my-8 rounded-2xl overflow-hidden"
@@ -75,15 +105,15 @@ const RegisterCourse = () => {
                         </div>
                     </div>
 
-                    <div className=' flex items-center justify-between mt-5'>
-                        <button onClick={toggleModal} className="text-white text-sm font-semibold flex gap-2 items-center  bg-blue-500 py-2 px-3 rounded-xl">
-                            <FaUserPlus  />
-                            Qo‘shilish
+                    <div className=' flex sm:flex-row   gap-2 flex-col items-center justify-between mt-5'>
+                        <button onClick={toggleModal} className="text-white text-sm w-full  font-semibold flex gap-2 items-center justify-center  bg-blue-500 py-2 px-3 rounded-xl">
+                            <FiSend  />
+                            Biz bilan aloqa
                         </button> 
 
 
-                        <a className='text-white text-sm font-semibold flex gap-2 items-center bg-blue-500 py-2 px-3 rounded-xl' href="tel:+998909000909"> 
-                            <BsFillTelephoneFill/> Bog'lanish
+                        <a className='text-white text-sm w-full font-semibold flex gap-2 items-center justify-center bg-blue-500 py-2 px-3 rounded-xl' href="tel:+998909000909"> 
+                            <BsFillTelephoneFill/> Hoziroq kursga yoziling
                         </a>
                     </div>
 
