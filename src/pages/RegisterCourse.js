@@ -105,7 +105,7 @@ const RegisterCourse = () => {
                         </div>
                     </div>
 
-                    <div className=' flex sm:flex-row   gap-2 flex-col items-center justify-between mt-5'>
+                    <div className=' flex lg:flex-row   gap-2 flex-col items-center justify-between mt-5'>
                         <button onClick={toggleModal} className="text-white text-sm w-full  font-semibold flex gap-2 items-center justify-center  bg-blue-500 py-2 px-3 rounded-xl">
                             <FiSend  />
                             Biz bilan aloqa
