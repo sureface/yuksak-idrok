@@ -18,7 +18,10 @@ const Home = () => {
             <RegisterFast />
             <MainAboutUs />
             <MainVideo />
-            <TeacherSlide />
+            <div className="container mx-auto">
+            <h1 className="text-black text-2xl uppercase font-bold text-center my-10">USTOZLARIMIZ</h1>
+                <TeacherSlide />
+            </div>
             <div className="py-12">
                 <h1 className="text-black text-2xl uppercase font-bold text-center my-10">BIZ HAQIMIZDA</h1>
                 <MainInfo />

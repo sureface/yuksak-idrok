@@ -1,0 +1,51 @@
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("./assets/images/bodyBackground-5.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./assets/images/bodyBackground-5.png") center/cover no-repeat;
+}
+
+body .main-video {
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  body .main-video {
+    height: 300px;
+  }
+}
+
+@media (max-width: 440px) {
+  body .main-video {
+    height: 200px;
+  }
+}
+
+@media (max-width: 1650px) {
+  body .container {
+    max-width: 1450px;
+  }
+}
+
+@media (max-width: 1500px) {
+  body .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1300px) {
+  body .container {
+    max-width: 1070px;
+  }
+}
+
+@media (max-width: 1070px) {
+  body .container {
+    max-width: 1020px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body .container {
+    padding: 0 10px;
+  }
+}
+/*# sourceMappingURL=App.css.map */
