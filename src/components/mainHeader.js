@@ -1,13 +1,11 @@
-import React  from 'react';
+import React from 'react';
 import '../styles/mainHeader.scss'
 import Navigation from "./navigation";
 import {FaFacebookF, FaInstagram, FaTelegramPlane, FaYoutube, FaUserGraduate, FaUsers, FaUserTie} from "react-icons/fa"
+import CountUp from 'react-countup';
+
 
 const MainHeader = () => {
-    // const [bitruvchlar, setBitruvchlar] = useState(0);
-    // const [oquvchilar, setOquvchilar] = useState(0);
-    // const [oqituvchilar, setOqituvchilar] = useState(0);
-
 
     return (
         <div className="mainHeader">
@@ -49,7 +47,11 @@ const MainHeader = () => {
                                     <FaUserGraduate className="  text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
                                 </div>
                                 <div className="xs:text-center flex vl:flex-col sm:flex-col xs:flex-col-reverse   lg:ml-10 md:ml-2 sm:gap-0 xs:gap-2">
-                                    <h1 className="text-white  text-base lg:text-xl xl:text-4xl mb-2 font-bold">86 +</h1>
+                                    <h1 className="text-white  text-base lg:text-xl xl:text-4xl mb-2 font-bold"><CountUp
+                                        start={0}
+                                        end={150}
+                                        duration={4.25}
+                                    />+</h1>
                                     <h1 className="text-white text-sm md:text-base lg:text-xl xl:text-2xl font-bold uppercase leading-none">Bitiruvchilar</h1>
                                 </div>
                             </div>
@@ -58,7 +60,11 @@ const MainHeader = () => {
                                     <FaUsers className=" text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
                                 </div>
                                 <div className="xs:text-center vl:flex-col flex sm:flex-col xs:flex-col-reverse lg:ml-10 md:ml-2 sm:gap-0 xs:gap-2">
-                                    <h1 className="text-white md:text-base lg:text-xl xl:text-4xl mb-2 font-bold">154 +</h1>
+                                    <h1 className="text-white  text-base lg:text-xl xl:text-4xl mb-2 font-bold"><CountUp
+                                        start={0}
+                                        end={50}
+                                        duration={4.25}
+                                    />+</h1>
                                     <h1 className="text-white text-sm md:text-base lg:text-xl xl:text-2xl font-bold uppercase leading-none">o‘quvchilarimiz</h1>
                                 </div>
                             </div>
@@ -67,7 +73,11 @@ const MainHeader = () => {
                                     <FaUserTie className="  text-2xl xl:text-6xl lg:text-3xl  text-blue-500" />
                                 </div>
                                 <div className="xs:text-center vl:flex-col flex sm:flex-col xs:flex-col-reverse lg:ml-10 md:ml-2 sm:gap-0 xs:gap-2">
-                                    <h1 className="text-white md:text-base lg:text-xl xl:text-4xl mb-2 font-bold">26 +</h1>
+                                    <h1 className="text-white  text-base lg:text-xl xl:text-4xl mb-2 font-bold"><CountUp
+                                        start={0}
+                                        end={15}
+                                        duration={4.25}
+                                    />+</h1>
                                     <h1 className="text-white text-sm md:text-base lg:text-xl xl:text-2xl font-bold uppercase leading-none">ustozlarimiz</h1>
                                 </div>
                             </div>
