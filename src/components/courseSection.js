@@ -6,7 +6,12 @@ import { API_URL } from '../utils/axios';
 
 const CourseSection = () => {
  
-    const [course, setCourse] = useState([]); 
+    const [course, setCourse] = useState([]);
+    const [loadMore, setLoadMore] = useState(6);
+
+    const load = () => {
+        setLoadMore(loadMore + 5);
+    }
 
     useEffect(() => {
         const getCourse = async () => {
@@ -33,7 +38,7 @@ const CourseSection = () => {
                     {
                         course.length ?
 
-                            course.map((item) => {
+                            course.slice(0, loadMore).map((item) => {
                                 return (
                                     <div key={item.id} className="course-card bg-white shadow-lg w-full rounded-2xl overflow-hidden">
 
@@ -83,6 +88,14 @@ const CourseSection = () => {
                             })
 
                             : <h1>Iltimos kuting</h1>
+                    }
+                </div>
+
+                <div className="flex items-center justify-center py-10">
+                    {
+                        loadMore < course.length && (
+                            <button className="bg-blue-500 py-3 px-5 text-white rounded-xl font-semibold text-xl capitalize" onClick={load}>ko'proq ko'rish</button>
+                        )
                     }
                 </div>
 
