@@ -1,23 +1,21 @@
-import React, { useState, useEffect} from 'react'
-import Slider from 'react-slick';
+import React, { useState, useEffect} from 'react'  
 import "../../styles/teacherSlide.scss";
 import axios from 'axios';
 import { API_URL } from '../../utils/axios';
 
 const TeacherSlide = () => {
 
-    const [teachers, setTeachers] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [teachers, setTeachers] = useState([]); 
+    const [loadMore, setLoadMore] = useState(3);
+
+    const load = () => {
+        setLoadMore(loadMore + 5);
+    }
 
     useEffect(() => {
        getTeachers();
     }, []);
-
-    useEffect(() => {
-        if (teachers.length !== 0) {
-            setIsLoading(false)
-        }
-    }, [teachers]);
+ 
 
     const getTeachers = async () => { 
 
@@ -31,75 +29,45 @@ const TeacherSlide = () => {
 
     }
 
-    const settings = {
-        infinite: true,
-        slidesToShow: 3,
-        speed: 800,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 870,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
-              }
-            },
-            {
-              breakpoint: 640,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-          ]
-    };
+     
     return (
-        <div>
+        <>
+        <div className="course-slides grid grid-cols-3 gap-6" >
             {
-                isLoading ? (
-                    <h2>Yuklanmoqda...</h2>
-                ): (
-                    <Slider  {...settings}>
-                {
-                    teachers.map((teacher) => {
+                teachers.length ?
+                teachers.slice(0, loadMore).map((teacher) => {
                         return (
-                            <div key={teacher.id} className="bg rounded-xl overflow-hidden">
+                            <div key={teacher.id} className="bg rounded-xl overflow-hidden shadow-lg">
                                 <div className="teacher-slide__img"
-                                style={{
+                                    style={{
                                         backgroundImage: `url(${teacher.img})`,
+                                        backgroundColor:"#fff",
                                         backgroundPosition: "center",
                                         backgroundSize: "cover",
                                         backgroundRepeat: "no-repeat",
                                         height: '200px'
                                     }}    
-                                >
-                                    <img src={teacher.img} alt="" />
+                                > 
                                      
                                 </div>
                                 <div className="p-4">
-                                    <h1 className="text-white text-xl tracking-wider font-medium">{teacher.first_name} { teacher.last_name}</h1> 
-                                    <p className='text-white'>{ teacher.description}</p>
+                                    <h1 className="text-white text-xl tracking-wider font-medium capitalize">{teacher.first_name} { teacher.last_name}</h1> 
+                                    <p className='text-white'>{ teacher.description.substring(0,100)}...</p>
                                 </div>
                             </div>
                         )
-                    })
-                 }
-                
-            </Slider>
-                )
+                }) : <h1>Iltimos kuting</h1>
+                        
             }
         </div>
+        <div className="flex items-center justify-center py-10">
+                    {
+                        loadMore < teachers.length && (
+                            <button className="bg-blue-500 py-3 px-5 text-white rounded-xl font-semibold text-xl capitalize" onClick={load}>ko'proq ko'rish</button>
+                        )
+                    }
+         </div>
+        </>
     )
 }
 

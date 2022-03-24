@@ -38,6 +38,12 @@
     z-index: 23;
     top: auto;
 }
+@media only screen and (max-width:900px){
+    .course-slides{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
 
 @media only screen and (max-width:590px){
     .slick-prev{
@@ -47,3 +53,8 @@
         right: 40%;
     }
 }
+@media only screen and (max-width:535px){
+    .course-slides{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
