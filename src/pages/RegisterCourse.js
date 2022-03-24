@@ -49,7 +49,7 @@ const RegisterCourse = () => {
         setToggle(index)
     }
 
-    return <div>
+    return <div className={isOpen ? "register-course-after" : ""}>
         <Navigation />
         <div className="container mx-auto">
             <h1 className="w-full text-2xl font-semibold text-center vl:my-5 sm:my-10 uppercase">
@@ -117,9 +117,9 @@ const RegisterCourse = () => {
                         </a>
                     </div>
 
-                    <div className={isOpen ? "fixed top-3 left-3 right-3 bottom-3 h-full" : "hidden"}>
+                    <div className={isOpen ? "fixed top-10 left-3 right-3 bottom-10 h-full" : "hidden"}>
                         <AiOutlineClose onClick={toggleModal} className='absolute right-3 top-3 text-white text-2xl cursor-pointer' />
-                        <MainInfo/> 
+                        <MainInfo className="z-10" /> 
                     </div>
 
                 </div>
