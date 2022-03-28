@@ -15,17 +15,14 @@ const Home = () => {
         <div className="app relative">
             <MainHeader />
             <CourseSection />
-            <RegisterFast />
             <MainAboutUs />
             <MainVideo />
+            <RegisterFast />
             <div className="container mx-auto">
-            <h1 className="text-black text-2xl uppercase font-bold text-center my-10">USTOZLARIMIZ</h1>
+            <h1 className="text-black text-2xl text-blue-500 uppercase font-bold text-center my-10">USTOZLARIMIZ</h1>
                 <TeacherSlide />
             </div>
-            <div className="py-12">
-                <h1 className="text-black text-2xl uppercase font-bold text-center my-10">BIZ HAQIMIZDA</h1>
-                <MainInfo />
-            </div>
+            <MainInfo />
             <MainInfoCard />
             <MainPartners />
             <Footer />

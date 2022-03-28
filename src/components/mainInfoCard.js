@@ -29,13 +29,13 @@ const MainInfoCard = () => {
                             <img className="w-full" src={cardImge2} alt="oops something wrong"/>
                         </div>
                         <div className="card-content p-7">
-                            <h1 className="text-black text-2xl font-semibold text-center mb-5">Online ro’yxatdan o’tish</h1>
+                            <h1 className="text-black text-2xl font-semibold text-center mb-5">Yuqori sifatli ta’lim</h1>
                             <p className="text-black text-lg font-medium text-justify">
-                                Biz bilan online tarzdda bog’laning,
-                                ro’yxatdan o’ting, kursimiz a’zosiga
-                                aylaning. Kurslarimizda sizni kutib
-                                qolamiz! Biz bilan online tarzdda
-                                bog’laning, ro’yxatdan o’ting ...
+                                O’zingizga mos kursni tanlang!
+                                Malakali ustozlar bilan o’rganing.O’quv
+                                kursi davomida doimiy tarzda misollar
+                                bilan sizni Universitetga tayyorlaymiz.
+                                O’quv jarayonini uyingizdan ham kuzating!
                             </p>
                         </div>
                     </div>
@@ -44,13 +44,10 @@ const MainInfoCard = () => {
                             <img className="w-full" src={cardImge3} alt="oops something wrong"/>
                         </div>
                         <div className="card-content p-7">
-                            <h1 className="text-black text-2xl font-semibold text-center mb-5">Online ro’yxatdan o’tish</h1>
+                            <h1 className="text-black text-2xl font-semibold text-center mb-5">TOP 10</h1>
                             <p className="text-black text-lg font-medium text-justify">
-                                Biz bilan online tarzdda bog’laning,
-                                ro’yxatdan o’ting, kursimiz a’zosiga
-                                aylaning. Kurslarimizda sizni kutib
-                                qolamiz! Biz bilan online tarzdda
-                                bog’laning, ro’yxatdan o’ting ...
+                                Biz har o'quv kurslari bo'yicha
+                                eng TOP 10 talabalarni nufuzli hamkorlarimizda tajriba o'rganishlari uchun jo'natamiz!
                             </p>
                         </div>
                     </div>

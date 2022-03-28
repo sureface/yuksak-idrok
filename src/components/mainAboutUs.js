@@ -17,7 +17,7 @@ const MainAboutUs = () => {
 
                             <div className="flex mb-10">
                                 <div className="h-auto w-3 bg-blue-500 hidden lg:block"></div>
-                                <div className="p-0 lg:p-3 text-lg">
+                                <div className="p-0 lg:p-3 text-lg text-center lg:text-left">
                                     Lorem Ipsum is simply dummy text of the printing
                                     and typesetting industry. Lorem Ipsum has been
                                     industry's standard dummy text ever since the,
@@ -27,11 +27,17 @@ const MainAboutUs = () => {
                                     into electronic typesetting, remaining essentially.
                                 </div>
                             </div>
-                            <div className="text-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores deserunt eaque esse
-                                fuga iure molestiae nam rem sapiente sint? Ab alias aliquam atque consequatur consequuntur,
-                                corporis, dicta dolor dolorem error est eveniet facilis hic incidunt nam natus nihil officia
-                                placeat qui ratione rerum sit sunt ullam, unde? Magni, voluptas.
+                            <div className="flex mb-10">
+                                <div className="p-0 lg:p-3 text-lg text-center lg:text-right">
+                                    Lorem Ipsum is simply dummy text of the printing
+                                    and typesetting industry. Lorem Ipsum has been
+                                    industry's standard dummy text ever since the,
+                                    when an unknown printer took a galley of type and
+                                    scrambled it to make a type specimen book. It has
+                                    survived not only five centuries, but also the leap
+                                    into electronic typesetting, remaining essentially.
+                                </div>
+                                <div className="h-auto w-3 bg-blue-500 hidden lg:block"></div>
                             </div>
                         </div>
                         <div className="flex justify-center lg:justify-start">

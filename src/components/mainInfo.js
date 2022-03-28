@@ -2,7 +2,7 @@ import React from 'react';
 
 const MainInfo = () => {
     return (
-        <div className="bg-blue-500 p-5">
+        <div className="bg-blue-500 p-5 my-10">
             <div className="container mx-auto">
                 <h1 className="text-white text-2xl font-semibold uppercase text-center mb-3 pb-3">ONLINE MUROJAAT</h1>
                 <form className="flex flex-col">
