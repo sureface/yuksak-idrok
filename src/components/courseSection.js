@@ -15,7 +15,7 @@ const CourseSection = () => {
 
     useEffect(() => {
         const getCourse = async () => {
-            await axios.get(`${API_URL}/courses`)
+            await axios.get(`${API_URL}/courses?limit=9999`)
                 .then(res => {
                     let data = res.data.courses
                     if (data) {

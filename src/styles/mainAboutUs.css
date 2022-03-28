@@ -1,13 +1,11 @@
-.aboutUsImage {
-  overflow: hidden;
+.mainAbout {
+  background: #F5F8FB;
+  padding: 80px 0;
+  filter: drop-shadow(0px 0px 40px rgba(0, 63, 67, 0.18));
 }
-.aboutUsImage .btn {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/cardimage1.png") center/cover no-repeat;
-  transition: 0.7s ease-in-out;
-  transform: scale(1);
-}
-.aboutUsImage .btn:hover {
-  transform: scale(1.2);
+.mainAbout_image {
+  background: url("../assets/images/aboutus.png") center no-repeat;
+  height: 481px;
 }
 
 /*# sourceMappingURL=mainAboutUs.css.map */
