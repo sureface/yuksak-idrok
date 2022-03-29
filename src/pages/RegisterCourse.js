@@ -1,133 +1,113 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Footer from '../components/footer';
 import Navigation from '../components/navigation';
-import courseImg from "../assets/images/cardimage1.png"; 
-import { BsFillTelephoneFill } from 'react-icons/bs';
-import {FiSend} from 'react-icons/fi';
+import courseImg from "../assets/images/cardimage1.png";
+import {FaUserFriends, FaUserGraduate, FaTelegramPlane, FaUserCog} from 'react-icons/fa';
+import {IoTodaySharp} from 'react-icons/io5';
+import {GiPriceTag} from 'react-icons/gi';
+import {MdAccessTimeFilled} from 'react-icons/md';
 import {AiOutlineClose} from 'react-icons/ai';
 import MainInfo from '../components/mainInfo';
 import axios from 'axios'
-import { API_URL } from '../utils/axios';
-import { useParams } from 'react-router-dom'
+import {API_URL} from '../utils/axios';
+import {useParams} from 'react-router-dom'
 
 const RegisterCourse = () => {
 
-
-    const [toggle, setToggle] = useState(1);
     const [isOpen, setIsOpen] = useState(false);
-    const [course, setCourse] = useState([]);
+
+
+    // const [course, setCourse] = useState([]);
+
+    // const { idCourse } = useParams();
     
+    // useEffect(() => {
+    //     getOneCourse();
+    // });
+    //
+    // const getOneCourse = async () => {
+    //
+    //     await axios.get(`${API_URL}/courses/${idCourse}`)
+    //     .then(res => {
+    //         setCourse(res.data.course);
+    //
+    //     })
+    //     .catch(err => {
+    //         console.log(err);
+    //     })
+    // }
 
+return (
+        <div>
+            <Navigation/>
+            <section className="h-auto relative">
+                <div className="container mx-auto">
+                    <h1 className="text-center py-7 text-3xl text-blue-500 font-bold capitalize">ona tili kursi</h1>
+                    <div className="bg-gray-100 py-10 mb-10 rounded-xl relative">
+                        <div className="grid grid-cols-5 gap-10 px-12">
+                            <div>
+                                <MdAccessTimeFilled className="text-blue-500 text-4xl mb-3"/>
 
-    const { idCourse } = useParams();
-    
-    useEffect(() => {
-        getOneCourse();
-    });
+                                <h3 className="text-black font-bold text-xl capitalize">davomiyligi</h3>
+                                <h3 className="text-black font-semibold text-lg">8 oy</h3>
+                                <h3 className="text-black font-semibold text-lg">1 oy / 12 ta dars</h3>
+                            </div>
+                            <div>
+                                <IoTodaySharp className="text-blue-500 text-4xl mb-3"/>
 
-    const getOneCourse = async () => { 
+                                <h3 className="text-black font-bold text-xl capitalize">kunlari</h3>
+                                <h3 className="text-black font-semibold text-lg">dushanba,seshanba,chorshanba</h3>
+                                <h3 className="text-black font-semibold text-lg">soat 15:00 dan 16:30 gacha</h3>
+                            </div>
+                            <div>
+                                <FaUserFriends className="text-blue-500 text-4xl mb-3"/>
 
-        await axios.get(`${API_URL}/courses/${idCourse}`)
-        .then(res => { 
-            setCourse(res.data.course);  
-            
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    }
+                                <h3 className="text-black font-bold text-xl capitalize">o'quvchilar</h3>
+                                <h3 className="text-black font-semibold text-lg">15 kishi</h3>
+                            </div>
+                            <div>
+                                <FaUserGraduate className="text-blue-500 text-4xl mb-3"/>
 
-    //toggle for  modal
-    const toggleModal = () => {
-        setIsOpen(!isOpen);
-    };
+                                <h3 className="text-black font-bold text-xl capitalize">ustoz</h3>
+                                <h3 className="text-black font-semibold text-lg">Jasur Jurayev</h3>
+                            </div>
+                            <div>
+                                <GiPriceTag className="text-blue-500 text-4xl mb-3"/>
 
-
-
-    // get current tab of page
-    const currentTab = (index) => {
-        setToggle(index)
-    }
-
-    return <div className={isOpen ? "register-course-after" : ""}>
-        <Navigation />
-        <div className="container mx-auto">
-            <h1 className="w-full text-2xl font-semibold text-center vl:my-5 sm:my-10 uppercase">
-                {
-                    course.map(item => {
-                        return item.title
-                    })
-                    
-
-                 }
-            </h1>
-
-            <div className="grid grid-cols-2 my-8 rounded-2xl overflow-hidden"
-            style={{backgroundColor: '#F7F7F7'}}
-            >
-                <div className='col-span-2 sm:col-span-1'>
-                        <img src={courseImg} className='' alt="" />
-                </div>
-
-                <div className="flex flex-col justify-between col-span-2 sm:col-span-1 xs:p-10 p-5">
-                    <div className="grid grid-cols-2 gap-2" >
-                        <button className={toggle === 1 ? "flex items-center justify-center py-2 text-lg font-semibold text-blue-500 border-t-2 border-blue-500" : "flex items-center justify-center py-2 text-lg font-semibold text_black"} onClick={() => currentTab(1)}>
-                            Guruh
-                        </button>
-                        <button className={toggle === 2 ? "flex items-center justify-center py-2 text-lg font-semibold text-blue-500 border-t-2 border-blue-500" : "flex items-center justify-center py-2 text-lg font-semibold text_black"} onClick={() => currentTab(2)}>
-                            Individual
-                        </button>
-                    </div>
-
-                    <div>
-                        <div className={toggle === 1 ? "flex flex-col gap-3 pt-3" : "hidden"}>
-                            <p className="">9 - 11 kishilik kurs  </p>
-                            <p className="">Davomiyligi 3 oydan - 5 oygacha </p>
-                            <p className="">Dushanba / Chorshanba / Juma </p>
-
-                            <label htmlFor="radio1" className="flex items-center gap-4">
-                                <input name="date-check"   id='radio1' type="radio" /> <p className="">09:00 dan - 11:00 gacha </p>
-                            </label>
-
-                            <p className=''>1 oyda - 12 ta dars</p>
-                            <p className=''>1 oylik to’lov 500 000 so’m!</p>
-                        </div>
-
-                        <div className={toggle === 2 ? "flex flex-col gap-3 pt-3" : "hidden"}>
-                        <p className="">1 kishilik kurs  </p>
-                            <p className="">Davomiyligi 3 oydan - 5 oygacha </p>
-                            <p className="">Dushanba / Chorshanba / Juma </p>
-                            <label htmlFor="radio5" className="flex items-center gap-4">
-                                <input name="date-check2"   id='radio5' type="radio" /> <p className="">09:00 dan - 11:00 gacha </p>
-                            </label>
-                            <p className=''>1 oyda - 12 ta dars</p>
-                            <p className=''>1 oylik to’lov 1 000 000 so’m!</p>
+                                <h3 className="text-black font-bold text-xl capitalize">narxi</h3>
+                                <h3 className="text-black font-semibold text-lg">600 000 so'm / oy</h3>
+                            </div>
                         </div>
                     </div>
-
-                    <div className=' flex sm:flex-row   gap-2 flex-col items-center justify-between mt-5'>
-                        <button onClick={toggleModal} className="text-white text-sm w-full  font-semibold flex gap-2 items-center justify-center  bg-blue-500 py-2 px-3 rounded-xl">
-                            <FiSend  />
-                            Biz bilan aloqa
-                        </button> 
-
-
-                        <a className='text-white text-sm w-full font-semibold flex gap-2 items-center justify-center bg-blue-500 py-2 px-3 rounded-xl' href="tel:+998909000909"> 
-                            <BsFillTelephoneFill/> Hoziroq kursga yoziling
-                        </a>
+                    <h1 className="text-3xl text-blue-500 font-bold capitalize text-center mb-10">
+                        kursimiz kimlarga to'g'ri keladi.. ?
+                    </h1>
+                    <div className="grid grid-cols-3 gap-10">
+                        <div className="bg-gray-100 rounded-xl py-10 px-5">
+                            <div className="flex items-center justify-center">
+                                <FaUserCog  className="text-4xl text-blue-500"/>
+                            </div>
+                            <h2 className="text-2xl">0 dan boshlamoqchi bo’lganlarga</h2>
+                        </div>
                     </div>
-
-                    <div className={isOpen ? "fixed top-10 left-3 right-3 bottom-10 h-full" : "hidden"}>
-                        <AiOutlineClose onClick={toggleModal} className='absolute right-3 top-3 text-white text-2xl cursor-pointer' />
-                        <MainInfo className="z-10" /> 
-                    </div>
-
                 </div>
-            </div>
-
+                <div className="absolute -bottom-5 right-7 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                    <div className="relative">
+                        <FaTelegramPlane className="w-full h-full text-2xl text-blue-500"/>
+                        <span
+                            className="animate-ping absolute -top-1 -left-1 h-8 w-8 rounded-full bg-blue-300 opacity-75"> </span>
+                    </div>
+                </div>
+                <div className={isOpen ? "fixed top-0 left-0 right-0 bottom-0 w-full flex items-center justify-center bg-gray-700 bg-opacity-75" : "hidden"}>
+                    <div className="relative">
+                        <AiOutlineClose onClick={() => setIsOpen(!isOpen)} className='absolute right-2 top-12 text-white text-2xl cursor-pointer transition duration-500 ease-in-out transform  hover:rotate-180'/>
+                        <MainInfo/>
+                    </div>
+                </div>
+            </section>
+            <Footer/>
         </div>
-        <Footer/>
-  </div>;
+    )
 };
 
 export default RegisterCourse;
