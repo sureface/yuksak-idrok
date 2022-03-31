@@ -1,43 +1,20 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Footer from '../components/footer';
 import Navigation from '../components/navigation';
-import courseImg from "../assets/images/cardimage1.png";
-import {FaUserFriends, FaUserGraduate, FaTelegramPlane, FaUserCog} from 'react-icons/fa';
+import "../styles/register.scss";
+import {FaUserFriends, FaUserGraduate} from 'react-icons/fa';
 import {IoTodaySharp} from 'react-icons/io5';
 import {GiPriceTag} from 'react-icons/gi';
 import {MdAccessTimeFilled} from 'react-icons/md';
-import {AiOutlineClose} from 'react-icons/ai';
-import MainInfo from '../components/mainInfo';
-import axios from 'axios'
-import {API_URL} from '../utils/axios';
-import {useParams} from 'react-router-dom'
+//import axios from 'axios'
+//import {API_URL} from '../utils/axios';
+//import {useParams} from 'react-router-dom'
+import img3 from "../assets/images/img3.png"
+import img2 from "../assets/images/img2.png"
+import img1 from "../assets/images/img1.png"
 
 const RegisterCourse = () => {
-
-    const [isOpen, setIsOpen] = useState(false);
-
-
-    // const [course, setCourse] = useState([]);
-
-    // const { idCourse } = useParams();
-    
-    // useEffect(() => {
-    //     getOneCourse();
-    // });
-    //
-    // const getOneCourse = async () => {
-    //
-    //     await axios.get(`${API_URL}/courses/${idCourse}`)
-    //     .then(res => {
-    //         setCourse(res.data.course);
-    //
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //     })
-    // }
-
-return (
+    return (
         <div>
             <Navigation/>
             <section className="h-auto relative">
@@ -80,28 +57,42 @@ return (
                         </div>
                     </div>
                     <h1 className="text-3xl text-blue-500 font-bold capitalize text-center mb-10">
-                        kursimiz kimlarga to'g'ri keladi.. ?
+                        kursimiz kimlarga to'g'ri keladi
                     </h1>
-                    <div className="grid grid-cols-3 gap-10">
-                        <div className="bg-gray-100 rounded-xl py-10 px-5">
-                            <div className="flex items-center justify-center">
-                                <FaUserCog  className="text-4xl text-blue-500"/>
+                    <div className="grid grid-cols-3 gap-10 py-40">
+                        <div className="bg-gray-100 rounded-xl py-10 px-5 relative">
+                            <div className={"absolute card_img w-3/5"}>
+                                <img src={img3} alt=""/>
                             </div>
-                            <h2 className="text-2xl">0 dan boshlamoqchi bo’lganlarga</h2>
+                            <h3 className="text-2xl mt-12 text-center font-semibold">0 dan boshlamoqchi
+                                bo’lganlarga</h3>
+                            <p className="text-lg text-justify m-4 text-gray-500 font-semibold">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque doloremque excepturi
+                                explicabo facere fugiat ipsam numquam rerum, ut voluptatem ?
+                            </p>
                         </div>
-                    </div>
-                </div>
-                <div className="absolute -bottom-5 right-7 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-                    <div className="relative">
-                        <FaTelegramPlane className="w-full h-full text-2xl text-blue-500"/>
-                        <span
-                            className="animate-ping absolute -top-1 -left-1 h-8 w-8 rounded-full bg-blue-300 opacity-75"> </span>
-                    </div>
-                </div>
-                <div className={isOpen ? "fixed top-0 left-0 right-0 bottom-0 w-full flex items-center justify-center bg-gray-700 bg-opacity-75" : "hidden"}>
-                    <div className="relative">
-                        <AiOutlineClose onClick={() => setIsOpen(!isOpen)} className='absolute right-2 top-12 text-white text-2xl cursor-pointer transition duration-500 ease-in-out transform  hover:rotate-180'/>
-                        <MainInfo/>
+                        <div className="bg-gray-100 rounded-xl py-10 px-5 relative">
+                            <div className={"absolute card_img w-3/5"}>
+                                <img src={img1} alt=""/>
+                            </div>
+                            <h3 className="text-2xl mt-12 text-center font-semibold">Boshlang’ich bilimga
+                                ega bo’lganlarga</h3>
+                            <p className="text-lg text-justify m-4 text-gray-500 font-semibold">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque doloremque excepturi
+                                explicabo facere fugiat ipsam numquam rerum, ut voluptatem ?
+                            </p>
+                        </div>
+                        <div className="bg-gray-100 rounded-xl py-10 px-5 relative">
+                            <div className={"absolute card_img w-3/5"}>
+                                <img src={img2} alt=""/>
+                            </div>
+                            <h3 className="text-2xl mt-12 text-center font-semibold">Kuchli sabr va ishtiyoqga
+                                ega bo’lgan insonlarga</h3>
+                            <p className="text-lg text-justify m-4 text-gray-500 font-semibold">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque doloremque excepturi
+                                explicabo facere fugiat ipsam numquam rerum, ut voluptatem ?
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
