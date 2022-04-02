@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { BrowserRouter, Route, Switch} from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 import './App.scss';
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -34,6 +37,7 @@ const App = () => {
 
     return (
         <div>
+            <ToastContainer style={{zIndex: "99999999"}}/>
             <BrowserRouter>
                 <Switch>
                     <Route path="/" exact  component={Home} />
@@ -43,7 +47,7 @@ const App = () => {
                     <Route path="/news" exact component={News} />
                     <Route path='/full-news/:id' exact component={FullNews} />
                     <Route path="/contact" exact  component={Contact} />
-                    <Route path="/courses/more/:idCourse" exact  component={RegisterCourse} />
+                    <Route path="/courses/more/:id" exact  component={RegisterCourse} />
                 </Switch>
             </BrowserRouter>
 
