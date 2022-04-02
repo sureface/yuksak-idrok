@@ -5,3 +5,64 @@
   align-items: center;
   justify-content: center;
 }
+
+.unActive{
+  &:before{
+    content: 'Afsus kursga qabul tugagan iltimos keyingi guruhni kuting..!';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3B82F6;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+}
+
+.empty{
+  &:before{
+    content: 'Bu kursga guruh ochilmagan';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 60;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3B82F6;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+}
+.empty_Individuals{
+  &:before{
+    content: 'Bu kursga individual guruh ochilmagan';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 60;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3B82F6;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+}
