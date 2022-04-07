@@ -15,6 +15,7 @@ import {getGroupsCourse, getIndividualsCourses} from "./register/query";
 const RegisterCourse = () => {
 
     const { id } = useParams();
+    console.log(id);
     const [groups, setGroups] = useState([]);
     const [individuals, setIndividuals] = useState([]);
     const [empty, setEmpty] = useState({});
@@ -61,10 +62,9 @@ const RegisterCourse = () => {
             <section className="h-auto relative">
                 <div className="container mx-auto">
                     <h1 className="text-center py-7 text-3xl text-blue-500 font-bold capitalize">{groups.courseName}</h1>
-                    {console.log(groups)}
                     <div className={groups.active === false || empty === true ? "bg-blue-500 sm:py-10 py-3 mb-10 rounded-xl relative empty" : "bg-gray-100 py-10 mb-10 rounded-xl relative"}>
                         <h1 className="font-bold text-xl text-blue-500 text-center mb-7 uppercase">guruh</h1>
-                        <div className={ groups.active === false ? "unActive relative grid grid-cols-5 gap-10 px-12" : "grid grid-cols-5 gap-10 px-12"}>
+                        <div className={ groups.active === false ? "unActive relative grid grid-cols-5 sm:gap-10 gap-6 sm:px-12 px-5" : "grid lg:grid-cols-5 sm:grid-cols-3  xs:grid-cols-2 grid-cols-1 sm:gap-10 gap-6 sm:px-12 px-5"}>
                             <div>
                                 <MdAccessTimeFilled className="text-blue-500 text-4xl mb-3"/>
 
@@ -102,7 +102,7 @@ const RegisterCourse = () => {
 
                     <div className={ individuals.active === false || empty === true ? "bg-blue-500 sm:py-10 py-3 mb-10 rounded-xl relative empty_Individuals" : "bg-gray-100 py-10 mb-10 rounded-xl relative"}>
                         <h1 className="font-bold text-xl text-blue-500 text-center mb-7 uppercase">individual guruh</h1>
-                        <div className={individuals.active === false ? "unActive relative grid grid-cols-5 gap-10 px-12" : "grid grid-cols-5 gap-10 px-12"}>
+                        <div className={individuals.active === false ? "unActive relative grid grid-cols-5 gap-10 px-12" : "grid lg:grid-cols-5 sm:grid-cols-3  xs:grid-cols-2 grid-cols-1 sm:gap-10 gap-6 sm:px-12 px-5"}>
                             <div>
                                 <MdAccessTimeFilled className="text-blue-500 text-4xl mb-3"/>
 
