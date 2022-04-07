@@ -52,19 +52,19 @@ const App = () => {
             </BrowserRouter>
 
             <div className={offsetY ? "fixed bottom-12 right-12 cursor-pointer z-50" : "hidden"} onClick={() => setIsOpen(!isOpen)}>
-                <div className="relative">
+                <div className="relative bg-blue-500 p-3 rounded-2xl">
                     <BsFillChatLeftDotsFill className="w-full h-full text-2xl text-white filter drop-shadow-xl"/>
                     <span
-                        className="animate-ping absolute -top-1 -left-1 h-8 w-8 rounded-full bg-blue-300 opacity-75"> </span>
+                        className="animate-ping absolute top-1 left-2 h-8 w-8 rounded-2xl bg-blue-300 opacity-75"> </span>
                 </div>
             </div>
             <div
-                className={isOpen ? "fixed top-0 left-0 right-0 bottom-0 w-full flex items-center justify-center bg-gray-700 bg-opacity-75 transition ease-in duration-200" : "hidden"}
+                className={isOpen ? "fixed top-0 left-0 right-0 bottom-0 w-full flex items-center justify-center bg-gray-700 bg-opacity-75 transition ease-in duration-200 z-50" : "hidden"}
             >
                 <div className="relative">
                     <AiOutlineClose onClick={() => setIsOpen(!isOpen)}
                                     className='absolute right-2 top-12 text-white text-2xl cursor-pointer transition duration-500 ease-in-out transform  hover:rotate-180'/>
-                    <MainInfo/>
+                    <MainInfo />
                 </div>
             </div>
         </div>
