@@ -34,9 +34,9 @@ const MainPartners = () => {
         ]
     };
     return (
-        <div className="mainPartners my-20">
+        <div className="mainPartners sm:my-20 my-10">
             <div className="container mx-auto">
-                <h1 className="text-center uppercase text-2xl text-black font-bold mb-20">hamkorlarimiz</h1>
+                <h1 className="text-center uppercase text-2xl text-black font-bold sm:mb-20 mb-8">hamkorlarimiz</h1>
                 <Slider {...settings}>
                     <div>
                         <img className="w-24" src={partners1} alt="oops something wrong"/>

@@ -36,6 +36,10 @@ const Navigation = () => {
                     <li>
                         <Link onClick={showToggler} className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/contact">biz bilan aloqa</Link>
                     </li>
+                    <li className='flex flex-col gap-1 text-white text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg'>
+                        <a href="tel:+998950070707">+998950070707</a>
+                        <a href="tel:+998950070707">+998950070707</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -1,0 +1,83 @@
+.navigationBar {
+  position: relative;
+}
+
+@media only screen and (max-width: 1023px) {
+  .navigationBar .nav-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    padding: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    position: absolute;
+    display: flex;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 136, 255, 0.9)), to(rgba(0, 136, 255, 0.9)));
+    background: linear-gradient(to right, rgba(0, 136, 255, 0.9), rgba(0, 136, 255, 0.9));
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .navigationBar .nav-link.show {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.navigationBar .dropdown {
+  position: relative;
+}
+
+.navigationBar .dropdown .dropdown-menu {
+  position: absolute;
+  left: -.25rem;
+  top: 2rem;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: .25rem;
+  -webkit-box-shadow: 0 2px 5px 0 white;
+          box-shadow: 0 2px 5px 0 white;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.navigationBar .dropdown .dropdown-menu.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: auto;
+}
+
+.navigationBar .dropdown .angelDown.rotateTop {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+/*# sourceMappingURL=navigation.css.map */

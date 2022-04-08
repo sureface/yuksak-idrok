@@ -51,11 +51,10 @@ const App = () => {
                 </Switch>
             </BrowserRouter>
 
-            <div className={offsetY ? "fixed bottom-12 right-12 cursor-pointer z-50" : "hidden"} onClick={() => setIsOpen(!isOpen)}>
+            <div className={offsetY ? "fixed bottom-4 right-4 cursor-pointer z-50" : "hidden"} onClick={() => setIsOpen(!isOpen)}>
                 <div className="relative bg-blue-500 p-3 rounded-2xl">
                     <BsFillChatLeftDotsFill className="w-full h-full text-2xl text-white filter drop-shadow-xl"/>
-                    <span
-                        className="animate-ping absolute top-1 left-2 h-8 w-8 rounded-2xl bg-blue-300 opacity-75"> </span>
+                    
                 </div>
             </div>
             <div

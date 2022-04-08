@@ -1,0 +1,12 @@
+.mainAbout {
+  background: #F5F8FB;
+  padding: 80px 0;
+  -webkit-filter: drop-shadow(0px 0px 40px rgba(0, 63, 67, 0.18));
+          filter: drop-shadow(0px 0px 40px rgba(0, 63, 67, 0.18));
+}
+
+.mainAbout_image {
+  background: url("../assets/images/aboutus.png") center no-repeat;
+  height: 481px;
+}
+/*# sourceMappingURL=mainAboutUs.css.map */

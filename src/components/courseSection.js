@@ -30,11 +30,11 @@ const CourseSection = () => {
     }, []);
 
     return (
-        <div className="courseSection my-20">
+        <div className="courseSection sm:my-20 my-10">
             <div className="container mx-auto">
                 <h1 className="text-center uppercase text-2xl text-black font-bold  mb-10">kurslar</h1>
 
-                <div className="course-slides grid grid-cols-3 gap-6">
+                <div className="course-slides grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
                     {
                         course.length ?
 

@@ -8,9 +8,9 @@ import cert6 from "../assets/images/cert6.png"
 
 const Certificate = () => {
     return (
-        <section className={"certificate sm:py-24 xs:py-12 py-6"}>
+        <section className={"certificate sm:pt-24 xs:pt-12 py-6"}>
             <h1 className={"text-2xl font-bold uppercase text-center md:my-10 my-6 text-blue-500"}>Litsenziayalar va sertifikatlar</h1>
-            <div className="grid sm:grid-cols-3 grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6">
                 <div>
                     <img src={cert1} alt="xatolik yuz berdi"/>
                 </div>
