@@ -65,10 +65,13 @@ const CourseSection = () => {
                                             className="course-card_img relative flex flex-col justify-between lg:h-72  ss:h-60  h-48">
                                         </div>
 
-                                        <div className="flex items-center justify-center my-6">
+                                        <div className="flex items-center flex-col justify-center my-6">
                                             <h1 className="uppercase text-lg text-gray-500 font-bold">
                                                 {item.title}
                                             </h1>
+                                            <p className='text-l text-center'>
+                                                {item.description.substring(0, 70)}...
+                                            </p>
                                         </div>
 
                                         <div className="px-4">

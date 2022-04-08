@@ -14,7 +14,8 @@ import {getGroupsCourse, getIndividualsCourses} from "./register/query";
 
 const RegisterCourse = () => {
 
-    const {id} = useParams();
+    const { id } = useParams();
+    console.log(id);
     const [groups, setGroups] = useState([]);
     const [individuals, setIndividuals] = useState([]);
     const [empty, setEmpty] = useState({});
@@ -27,8 +28,7 @@ const RegisterCourse = () => {
                 if (data.name){
                     setEmpty(true);
                 }
-                setGroups(data);
-                console.log(data);
+                setGroups(data); 
             } else if (error) {
                 console.log(error);
             }
@@ -62,9 +62,9 @@ const RegisterCourse = () => {
             <section className="h-auto relative">
                 <div className="container mx-auto">
                     <h1 className="text-center py-7 text-3xl text-blue-500 font-bold capitalize">{groups.courseName}</h1>
-                    <div className={ groups.active === false || empty === true ? "bg-blue-500 py-10 mb-10 rounded-xl relative empty" : "bg-gray-100 py-10 mb-10 rounded-xl relative"}>
+                    <div className={groups.active === false || empty === true ? "bg-blue-500 sm:py-10 py-3 mb-10 rounded-xl relative empty" : "bg-gray-100 py-10 mb-10 rounded-xl relative"}>
                         <h1 className="font-bold text-xl text-blue-500 text-center mb-7 uppercase">guruh</h1>
-                        <div className={ groups.active === false ? "unActive relative grid grid-cols-5 gap-10 px-12" : "grid grid-cols-5 gap-10 px-12"}>
+                        <div className={ groups.active === false ? "unActive relative grid grid-cols-5 sm:gap-10 gap-6 sm:px-12 px-5" : "grid lg:grid-cols-5 sm:grid-cols-3  xs:grid-cols-2 grid-cols-1 sm:gap-10 gap-6 sm:px-12 px-5"}>
                             <div>
                                 <MdAccessTimeFilled className="text-blue-500 text-4xl mb-3"/>
 
@@ -100,9 +100,9 @@ const RegisterCourse = () => {
                         </div>
                     </div>
 
-                    <div className={ individuals.active === false || empty === true ? "bg-blue-500 py-10 mb-10 rounded-xl relative empty_Individuals" : "bg-gray-100 py-10 mb-10 rounded-xl relative"}>
+                    <div className={ individuals.active === false || empty === true ? "bg-blue-500 sm:py-10 py-3 mb-10 rounded-xl relative empty_Individuals" : "bg-gray-100 py-10 mb-10 rounded-xl relative"}>
                         <h1 className="font-bold text-xl text-blue-500 text-center mb-7 uppercase">individual guruh</h1>
-                        <div className={ individuals.active === false ? "unActive relative grid grid-cols-5 gap-10 px-12" : "grid grid-cols-5 gap-10 px-12"}>
+                        <div className={individuals.active === false ? "unActive relative grid grid-cols-5 gap-10 px-12" : "grid lg:grid-cols-5 sm:grid-cols-3  xs:grid-cols-2 grid-cols-1 sm:gap-10 gap-6 sm:px-12 px-5"}>
                             <div>
                                 <MdAccessTimeFilled className="text-blue-500 text-4xl mb-3"/>
 
@@ -141,36 +141,36 @@ const RegisterCourse = () => {
                     <h1 className="text-3xl text-blue-500 font-bold capitalize text-center mb-10">
                         kursimiz kimlarga to'g'ri keladi
                     </h1>
-                    <div className="grid grid-cols-3 gap-10 py-40">
-                        <div className="bg-gray-100 rounded-xl py-10 px-5 relative">
+                    <div className="cards grid grid-cols-6 lg:gap-10 md:gap-y-0 sm:gap-y-64 gap-y-40 gap-5 md:py-40 pt-40 pb-20">
+                        <div className="bg-gray-100 md:col-span-2 xs:col-span-3   rounded-xl lg:py-10 lg:px-5 p-3 relative">
                             <div className={"absolute card_img w-3/5"}>
                                 <img src={img3} alt=""/>
                             </div>
-                            <h3 className="text-2xl mt-12 text-center font-semibold">0 dan boshlamoqchi
+                            <h3 className="lg:text-2xl text-xl lg:mt-12 mt-3 text-center font-semibold">0 dan boshlamoqchi
                                 bo’lganlarga</h3>
-                            <p className="text-lg text-justify m-4 text-gray-500 font-semibold">
+                            <p className="lg:text-lg text-base tracking-wider text-justify lg:m-4 my-4 mx-1 text-gray-500 font-semibold">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque doloremque excepturi
                                 explicabo facere fugiat ipsam numquam rerum, ut voluptatem ?
                             </p>
                         </div>
-                        <div className="bg-gray-100 rounded-xl py-10 px-5 relative">
+                        <div className="bg-gray-100 md:col-span-2 xs:col-span-3   rounded-xl lg:py-10 lg:px-5 p-3 relative">
                             <div className={"absolute card_img w-3/5"}>
                                 <img src={img1} alt=""/>
                             </div>
-                            <h3 className="text-2xl mt-12 text-center font-semibold">Boshlang’ich bilimga
+                            <h3 className="lg:text-2xl text-xl lg:mt-12 mt-3 text-center font-semibold">Boshlang’ich bilimga
                                 ega bo’lganlarga</h3>
-                            <p className="text-lg text-justify m-4 text-gray-500 font-semibold">
+                            <p className="lg:text-lg text-base tracking-wider text-justify lg:m-4 my-4 mx-1 text-gray-500 font-semibold">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque doloremque excepturi
                                 explicabo facere fugiat ipsam numquam rerum, ut voluptatem ?
                             </p>
                         </div>
-                        <div className="bg-gray-100 rounded-xl py-10 px-5 relative">
+                        <div className="bg-gray-100 md:col-span-2 xs:col-span-3  rounded-xl lg:py-10 lg:px-5 p-3 relative">
                             <div className={"absolute card_img w-3/5"}>
                                 <img src={img2} alt=""/>
                             </div>
-                            <h3 className="text-2xl mt-12 text-center font-semibold">Kuchli sabr va ishtiyoqga
+                            <h3 className="lg:text-2xl text-xl lg:mt-12 mt-3 text-center font-semibold">Kuchli sabr va ishtiyoqga
                                 ega bo’lgan insonlarga</h3>
-                            <p className="text-lg text-justify m-4 text-gray-500 font-semibold">
+                            <p className="lg:text-lg text-base tracking-wider text-justify lg:m-4 my-4 mx-1 text-gray-500 font-semibold">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque doloremque excepturi
                                 explicabo facere fugiat ipsam numquam rerum, ut voluptatem ?
                             </p>

@@ -1,9 +1,50 @@
+.cards{
+  @media only screen and (max-width:540px){
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
 .card_img{
   top: -12rem;
   right: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width:1024px){
+    top: -10rem;
+  }
+  @media only screen and (max-width:860px){
+    top: -8rem;
+  }
+  @media only screen and (max-width:768px){
+    top: -12rem;
+  }
+  @media only screen and (max-width:660px){
+    top: -10rem;
+  }
+  @media only screen and (max-width:590px){
+    top: -9rem;
+  }
+  @media only screen and (max-width:550px){
+    top: -8rem;
+  }
+  @media only screen and (max-width:540px){
+    top: -11rem;
+    width: 40%;
+    right: 30%;
+  }
+  @media only screen and (max-width:500px){
+    top: -10rem;
+  }
+  @media only screen and (max-width:450px){
+    top: -9rem;
+  }
+  @media only screen and (max-width:400px){
+    top: -8rem;
+  }
+  @media only screen and (max-width:350px){
+    top: -7rem;
+  }
 }
 
 .unActive{
@@ -14,7 +55,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 60;
+    z-index: 50;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,6 +64,15 @@
     color: white;
     font-weight: bold;
     font-family: sans-serif;
+    @media only screen and (max-width:768px){
+      text-align: center;
+    }
+    @media only screen and (max-width:550px){
+      font-size:32px;
+    }
+    @media only screen and (max-width:400px){
+      font-size:25px;
+    }
   }
 }
 
@@ -34,7 +84,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 60;
+    z-index: 50;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -44,6 +94,15 @@
     color: white;
     font-weight: bold;
     font-family: sans-serif;
+    @media only screen and (max-width:768px){
+      text-align: center;
+    }
+    @media only screen and (max-width:550px){
+      font-size:32px;
+    }
+    @media only screen and (max-width:400px){
+      font-size:25px;
+    }
   }
 }
 .empty_Individuals{
@@ -54,7 +113,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 60;
+    z-index: 50;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -64,5 +123,14 @@
     color: white;
     font-weight: bold;
     font-family: sans-serif;
+    @media only screen and (max-width:768px){
+      text-align: center;
+    }
+    @media only screen and (max-width:550px){
+      font-size:32px;
+    }
+    @media only screen and (max-width:400px){
+      font-size:25px;
+    }
   }
 }
