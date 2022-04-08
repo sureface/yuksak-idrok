@@ -35,7 +35,7 @@ const RegisterCourse = () => {
         }
         getGroups();
 
-    }, []);
+    }, [id]);
 
     useEffect(() => {
 
@@ -53,7 +53,7 @@ const RegisterCourse = () => {
         }
         getGroups();
 
-    }, []);
+    }, [id]);
 
 
     return (

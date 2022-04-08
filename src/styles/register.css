@@ -1,9 +1,72 @@
+@media only screen and (max-width: 540px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .card_img {
   top: -12rem;
   right: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 1024px) {
+  .card_img {
+    top: -10rem;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .card_img {
+    top: -8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .card_img {
+    top: -12rem;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .card_img {
+    top: -10rem;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .card_img {
+    top: -9rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .card_img {
+    top: -8rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .card_img {
+    top: -11rem;
+    width: 40%;
+    right: 30%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card_img {
+    top: -10rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .card_img {
+    top: -9rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .card_img {
+    top: -8rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .card_img {
+    top: -7rem;
+  }
 }
 
 .unActive:before {
@@ -13,7 +76,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 60;
+  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +85,21 @@
   color: white;
   font-weight: bold;
   font-family: sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  .unActive:before {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .unActive:before {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .unActive:before {
+    font-size: 25px;
+  }
 }
 
 .empty:before {
@@ -31,7 +109,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 60;
+  z-index: 50;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -42,6 +120,21 @@
   font-weight: bold;
   font-family: sans-serif;
 }
+@media only screen and (max-width: 768px) {
+  .empty:before {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .empty:before {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .empty:before {
+    font-size: 25px;
+  }
+}
 
 .empty_Individuals:before {
   content: "Bu kursga individual guruh ochilmagan";
@@ -50,7 +143,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 60;
+  z-index: 50;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -60,6 +153,21 @@
   color: white;
   font-weight: bold;
   font-family: sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  .empty_Individuals:before {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .empty_Individuals:before {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .empty_Individuals:before {
+    font-size: 25px;
+  }
 }
 
 /*# sourceMappingURL=register.css.map */
