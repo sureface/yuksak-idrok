@@ -32,9 +32,9 @@ const Footer = () => {
                             <div className="w-36 sm:mr-10 ">
                                 <h1 className="text-white text-md uppercase">Aloqa uchun tel:</h1>
                             </div>
-                            <div className="w-48">
-                                <h1 className="text-white text-md">(71) 128-19-97</h1>
-                                <h1 className="text-white text-md">(71) 128-19-97</h1>
+                            <div className="w-48 flex flex-col">
+                                <a href="tel:+998950071430" className="text-white text-md">(95) 0071430</a>
+                                <a href="tel:+998770070707" className="text-white text-md">(77) 0070707</a>
                             </div>
                         </div>
                         <div className="flex sm:flex-row flex-col mb-5 items-center sm:gap-0 gap-2">
@@ -69,7 +69,7 @@ const Footer = () => {
                 </div>
                 <hr/>
                 <div className="flex items-center justify-center pt-5">
-                    <h1 className="text-white text-md font-semibold"> &copy; 2022 By <a href="/#" className="text-black font-bold">WWC</a> All Rights Reserved</h1>
+                    <h1 className="text-white text-md font-semibold"> &copy; <a href="https://webmakon.uz" className="text-black font-bold">WebMakon</a> 2022 All Rights Reserved.</h1>
                 </div>
             </div>
         </div>
