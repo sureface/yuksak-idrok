@@ -4,9 +4,9 @@ import {Link} from "react-router-dom";
 const Footer = () => {
     return (
         <div className="footer bg-blue-500 py-10">
-            <div className="container mx-auto vl:text-left  ">
-                <div className="flex justify-between mb-5 lg:flex-nowrap vl:flex-wrap  " >
-                    <div className=' ss:m-0 ss:text-left m-auto text-center'>
+            <div className="container mx-auto text-left ">
+                <div className="flex sm:flex-row flex-col justify-between mb-5 lg:flex-nowrap flex-wrap   " >
+                    <div className=' sm:m-0 sm:text-left m-auto text-center'>
                         <h1 className="text-xl text-white font-medium mb-4 uppercase">Foydali linklar</h1>
                         <ul>
                             <li className="h-10">
@@ -26,10 +26,10 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div  className='xs:m-0   m-auto  '>
-                        <h1 className="text-xl text-white font-medium mb-4 uppercase">bining manzil</h1>
-                        <div className="flex xs:flex-row vl:flex-col mb-5     ">
-                            <div className="w-36 mr-10">
+                    <div  className='sm:m-0  m-auto sm:text-left text-center '>
+                        <h1 className="text-xl text-white font-medium mb-4 uppercase sm:mt-0 mt-5" >bizning manzil</h1>
+                        <div className="flex sm:flex-row flex-col mb-5 items-center sm:gap-0 gap-2 ">
+                            <div className="w-36 sm:mr-10 ">
                                 <h1 className="text-white text-md uppercase">Aloqa uchun tel:</h1>
                             </div>
                             <div className="w-48">
@@ -37,8 +37,8 @@ const Footer = () => {
                                 <h1 className="text-white text-md">(71) 128-19-97</h1>
                             </div>
                         </div>
-                        <div className="flex xs:flex-row vl:flex-col mb-5">
-                            <div className="w-36 mr-10">
+                        <div className="flex sm:flex-row flex-col mb-5 items-center sm:gap-0 gap-2">
+                            <div className="w-36 sm:mr-10">
                                 <h1 className="text-white text-md uppercase">Manzil:</h1>
                             </div>
                             <div className="w-48">
@@ -49,8 +49,8 @@ const Footer = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex xs:flex-row vl:flex-col">
-                            <div className="w-36 mr-10">
+                        <div className="flex sm:flex-row flex-col mb-5 items-center sm:gap-0 gap-2">
+                            <div className="w-36 sm:mr-10">
                                     <h1 className="text-white text-md uppercase">Mo’ljal:</h1>
                             </div>
                             <div className="w-48">

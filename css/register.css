@@ -1,0 +1,142 @@
+.card_img {
+  top: -12rem;
+  right: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.unActive:before {
+  content: 'Afsus kursga qabul tugagan iltimos keyingi guruhni kuting..!';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #3B82F6;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .unActive:before {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .unActive:before {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .unActive:before {
+    font-size: 25px;
+  }
+}
+
+.empty:before {
+  content: 'Bu kursga guruh ochilmagan';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #3B82F6;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .empty:before {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .empty:before {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .empty:before {
+    font-size: 25px;
+  }
+}
+
+.empty_Individuals:before {
+  content: 'Bu kursga individual guruh ochilmagan';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #3B82F6;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .empty_Individuals:before {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .empty_Individuals:before {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .empty_Individuals:before {
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=register.css.map */
