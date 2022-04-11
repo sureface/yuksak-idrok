@@ -17,28 +17,26 @@ const Navigation = () => {
         <div className="navigationBar h-20 lg:bg-blue-500 bg-white flex items-center">
             <div className="container mx-auto flex items-center justify-between">
                 <button type="button" className={"lg:hidden block"} onClick={showToggler}>
-                    <FaBars  className="text-4xl text-blue-500"/>
-                </button>
+                    <FaBars  className="text-4xl text-blue-500"/></button>
                 <div>
                     <Link to="/"><img className="w-32 lg:block hidden" src={Logo} alt="oops something went wrong"/></Link>
                     <Link onClick={showToggler} to="/"><img className="w-32 lg:hidden block" src={LogoBlue} alt="oops something went wrong"/></Link>
                 </div>
                 <ul className={ showNav ? "lg:flex hidden items-center lg:ml-10 nav-link   show" : "lg:flex items-center lg:ml-10 nav-link  hidden "}>
                     <li>
-                        <Link onClick={showToggler} className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/courses">kurslar</Link>
+                        <Link onClick={showToggler} className="uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/courses">kurslar</Link>
                     </li>
                     <li>
-                        <Link onClick={showToggler} className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/about">biz haqimizda</Link>
+                        <Link onClick={showToggler} className="uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/about">biz haqimizda</Link>
                     </li>
                     <li>
-                        <Link onClick={showToggler} className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/news">yangiliklar</Link>
+                        <Link onClick={showToggler} className="uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/news">yangiliklar</Link>
                     </li>
                     <li>
-                        <Link onClick={showToggler} className="links uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/contact">biz bilan aloqa</Link>
+                        <Link onClick={showToggler} className="uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold lg:py-7 lg:px-6 hover:bg-white hover:text-blue-500" to="/contact">biz bilan aloqa</Link>
                     </li>
-                    <li className='flex flex-col gap-1 text-white text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg'>
-                        <a href="tel:+998950070707">+998950070707</a>
-                        <a href="tel:+998950070707">+998950070707</a>
+                    <li className="">
+                        <a href="tel:+998950071430" className="leading-5 uppercase text-sm md:text-md lg:text-md xl:text-lg 2xl:text-lg text-white font-semibold">+998950071430</a>
                     </li>
                 </ul>
             </div>

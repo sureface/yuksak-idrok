@@ -6,7 +6,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
+  @media (max-width: 1480px) {
+    top: -8rem;
+  }
 }
 
 .unActive{
