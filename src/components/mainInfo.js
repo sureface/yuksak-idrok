@@ -16,7 +16,7 @@ const MainInfo = () => {
             chatId: "1703698442"
         }
 
-        axios.get(`${bot.BaseUrl + bot.TOKEN}/sendMessage?chat_id=${bot.chatId}&text=${"ismi: " + name + "\n\n  email: " + email + "\n tel: " + phoneNumber + "\n  murojat: " + description}`)
+        axios.get(`${bot.BaseUrl + bot.TOKEN}/sendMessage?chat_id=${bot.chatId}&text=${"ismi: " + name + "%0Aemail: " + email + "%0Atel: " + phoneNumber + "%0Amurojat: " + description}`)
             .then(res => {
                 if (res){
                     setName('');
